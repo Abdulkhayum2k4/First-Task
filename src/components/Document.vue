@@ -1,5 +1,5 @@
 <template>
-    <div class="bgclr vh-100 pt-2 container-fluid">
+    <div class="pt-2 container-fluid">
     <div class="d-flex justify-content-between ">
 
       <div class="">
@@ -28,10 +28,7 @@
 </template>
 
 
-<style>
-.bgclr {
-  background-color: #eceff6;
-}
+<style scoped>
 .redclr{
   color: var(--primary-red);
 }
