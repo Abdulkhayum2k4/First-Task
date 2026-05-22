@@ -33,8 +33,6 @@ import logo from '../assets/logo.png'
   margin-bottom: -8px;
   border-bottom: 4px solid #fe5358;
 }
-
-
 .correctgap{
   gap:35px;
 }
