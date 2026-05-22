@@ -1,6 +1,4 @@
 <template>
-  hi lol
-  <br>
   <Navbar />
 </template>
 
