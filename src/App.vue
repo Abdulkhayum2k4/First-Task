@@ -1,4 +1,3 @@
 <template>
-  hi lol
-
+  <router-view></router-view>
 </template>
