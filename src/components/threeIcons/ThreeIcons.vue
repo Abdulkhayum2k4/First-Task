@@ -1,5 +1,5 @@
 <template>
-  <div class="icons d-flex">
+  <div class="icons d-flex gap-1">
     <div
       class="fontisto border border-1 rounded rounded-circle position-relative"
     >

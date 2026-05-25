@@ -1,14 +1,12 @@
 <template>
-  <div class="">
-    <Navbar />
-    <div class="bgclr">
-      <DocumentProps name="Document Approval" />
+  <Navbar />
+  <div class="bgclr">
+    <DocumentProps name="Document Approval" />
 
-      <Approval />
+    <Approval />
 
-      <div class="three_icons position-relative">
-        <ThreeIcons class="dots position-absolute" />
-      </div>
+    <div class="three_icons position-relative">
+      <ThreeIcons class="dots position-absolute" />
     </div>
   </div>
 </template>
@@ -28,7 +26,7 @@ import ThreeIcons from "../threeIcons/ThreeIcons.vue";
 .bgclr {
   background-color: var(--bg-clr);
 }
-.dots{
+.dots {
   left: 92%;
 }
 </style>
