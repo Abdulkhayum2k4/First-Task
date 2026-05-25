@@ -8,9 +8,9 @@
       <Approval />
       
       <div class="table-responsive container-fluid">
-        <table class="table table-bordered table-striped">
-          <thead>
-            <tr style="font-size: 13px">
+        <table class="table table-bordered table-striped p-3">
+          <thead class="bg-secondary">
+            <tr style="font-size: 13px;" class="bg-secondary">
               <th>#</th>
               <th>
                 <span>Document Type</span>
@@ -228,5 +228,7 @@ const documents = ref([
 .bgclr {
   background-color: var(--bg-clr);
 }
-
+.changebg{
+  background-color: #e8e8e8 !important;
+}
 </style>
