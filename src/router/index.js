@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Practice from "../views/Practice.vue";
 import DocumentReservation from "../components/documents/DocumentReservation.vue";
-
+import Dummy from "../views/Dummy.vue";
 const routes = [
   {
     path: "/",
@@ -15,6 +15,10 @@ const routes = [
   {
     path: "/documentReservation",
     component: DocumentReservation,
+  },
+  {
+    path:"/dummy",
+    component:Dummy,
   },
 ];
 
