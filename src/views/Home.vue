@@ -7,9 +7,9 @@
 </template>
 
 <script setup>
-import Navbar from "../components/Navbar.vue";
+import Navbar from "../components/navbar/Navbar.vue";
 import Document from "../components/Document.vue";
-import Approval from "../components/Approval.vue";
+import Approval from "../components/documentApproval/document/Approval.vue";
 </script>
 
 <style scoped>

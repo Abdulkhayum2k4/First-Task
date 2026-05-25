@@ -1,20 +1,6 @@
 <template>
   <div class="navbarr">
     <nav class="bg-dark navbarr d-flex flex-column justify-content-center">
-      <!-- <ul class="d-flex list-unstyled correctgap m-0 text-white">
-        <li><img :src="logo" alt="" class="ps-3"></li>
-        <li class=" fw-semibold res">Reservations</li>
-        <li>Pre check ins</li>
-        <li>Approvals</li>
-        <li>Promotions</li>
-        <li>Reports</li>
-        <li>Uploads</li>
-        <li>Supporting docs</li>
-        <li>Logs</li>
-        <li>Settings</li>
-      </ul> -->
-
-
       <ul class="d-flex list-unstyled correctgap m-0 text-white align-items-center">
         <li>
           <img :src="logo" alt="Logo" class="ps-3" />
@@ -63,7 +49,7 @@
 
 
 <script setup>
-import logo from '../assets/logo.png'
+import logo from '../../assets/logo.png'
 </script>
 
 <style>
