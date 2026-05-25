@@ -41,6 +41,6 @@ defineProps({
 
 <style scoped>
 .redclr {
-  color: var(--primary-red) !important;
+  color: var(--primary-red);
 }
 </style>
