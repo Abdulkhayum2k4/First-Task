@@ -1,33 +1,12 @@
+<script setup>
+import Practice from "../views/Practice.vue";
+const names = "Document Approval";
+</script>
+
 <template>
-    <div class="pt-2 container-fluid">
-    <div class="d-flex justify-content-between ">
-
-      <div class="">
-        <div class="pt-1">
-          <p style="color: #183153;" class="fw-semibold">Document Approval</p>
-        </div>
-      </div>
-      <div class="d-flex gap-2">
-        <div class="d-flex gap-2 px-2 pt-2 redclr fw-semibold" >
-          <a href="" class="redclr text-decoration-none">
-            <i class="ri-restart-line fw-light pe-1"></i>
-          <span class="fw-bold ">Refresh</span>
-          </a>
-        </div>
-        <div class="d-flex bg-white gap-4 px-2 align-items-center align-self-center justify-content-center border border-secondary rounded rounded-1">
-          <span>Past 7 days</span>
-          <!-- <i class="ri-calendar-line"></i> -->
-          <i class="ri-calendar-event-line"></i>
-        </div>
-
-        <div class="d-flex bg-white gap-4 px-2 align-items-center align-self-center justify-content-center border border-secondary rounded rounded-1">
-          <span>Manage</span>
-          <i class="ri-kanban-view-2"></i>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Practice :name="names"/>
 </template>
+<<<<<<< HEAD
 
 <style scoped>
 
@@ -35,3 +14,5 @@
   color: var(--primary-red) !important;
 }
 </style>
+=======
+>>>>>>> 1381ceaf611919234e823e4ccccb64d6ae7241e4
