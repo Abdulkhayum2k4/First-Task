@@ -1,55 +1,55 @@
 <template>
   <div class="navbarr">
     <nav class="bg-dark navbarr d-flex flex-column justify-content-center">
-      <ul class="d-flex list-unstyled correctgap m-0 text-white align-items-center">
+      <ul
+        class="d-flex list-unstyled correctgap m-0 text-white align-items-center"
+      >
         <li>
           <img :src="logo" alt="Logo" class="ps-3" />
         </li>
 
         <li class="fw-semibold res">
-          <a href="/reservations" class="navlinks">Reservations</a>
+          <a href="" class="navlinks">Reservations</a>
         </li>
 
         <li>
-          <a href="/pre-check-ins" class="navlinks">Pre check ins</a>
+          <a href="-check-ins" class="navlinks">Pre check ins</a>
         </li>
 
         <li>
-          <a href="/approvals" class="navlinks">Approvals</a>
+          <a href="" class="navlinks">Approvals</a>
         </li>
 
         <li>
-          <a href="/promotions" class="navlinks">Promotions</a>
+          <a href="" class="navlinks">Promotions</a>
         </li>
 
         <li>
-          <a href="/reports" class="navlinks">Reports</a>
+          <a href="" class="navlinks">Reports</a>
         </li>
 
         <li>
-          <a href="/uploads" class="navlinks">Uploads</a>
+          <a href="" class="navlinks">Uploads</a>
         </li>
 
         <li>
-          <a href="/supporting-docs" class="navlinks">Supporting docs</a>
+          <a href="" class="navlinks">Supporting docs</a>
         </li>
 
         <li>
-          <a href="/logs" class="navlinks">Logs</a>
+          <a href="" class="navlinks">Logs</a>
         </li>
 
         <li>
-          <a href="/settings" class="navlinks">Settings</a>
+          <a href="" class="navlinks">Settings</a>
         </li>
       </ul>
     </nav>
   </div>
 </template>
 
-
-
 <script setup>
-import logo from '../../assets/logo.png'
+import logo from "../../assets/logo.png";
 </script>
 
 <style>
@@ -62,14 +62,14 @@ import logo from '../../assets/logo.png'
   margin-bottom: -8px;
   border-bottom: 4px solid #fe5358;
 }
-.correctgap{
-  gap:35px;
+.correctgap {
+  gap: 35px;
 }
-.navlinks{
+.navlinks {
   text-decoration: none;
   color: white;
 }
-.navlinks:hover{
-  color:#fe5358;
+.navlinks:hover {
+  color: #fe5358;
 }
 </style>
