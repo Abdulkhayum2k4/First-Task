@@ -1,190 +1,12 @@
-<!-- <template>
-    <Navbar />
-    <div class="bgclr">
-        <DocumentProps name="Documents" />
-        <div class="">
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th><i class="ri-arrow-down-s-line"></i></th>
-                            <th>Confirmation</th>
-                            <th>CRS ID</th>
-                            <th>Guest Name</th>
-                            <th>Stay Period</th>
-                            <th>Room</th>
-                            <th>Guests</th>
-                            <th>Reservation</th>
-                            <th>Identification</th>
-                            <th>C-Form</th>
-                            <th>Reg Card</th>
-                            <th>Info Folio</th>
-                            <th>Charge Slip</th>
-                            <th>Invoices</th>
-                            <th>DM Verified</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="(guest, index) in guests" :key="index">
-                            <td>{{ index + 1 }}</td>
-                            <td></td>
-                            <td class="fw-bold">
-                                {{ guest.confirmation }}
-                            </td>
-
-                            <td>{{ guest.crs }}</td>
-
-                            <td>{{ guest.name }}</td>
-
-                            <td>{{ guest.period }}</td>
-
-                            <td>{{ guest.room }}</td>
-
-                            <td>{{ guest.guests }}</td>
-
-                            <td>
-                                <span :class="reservationClass(guest.reservation)">
-                                    {{ guest.reservation }}
-                                </span>
-                            </td>
-
-                            <td>
-                                <span :class="identificationClass(guest.identification)">
-                                    {{ guest.identification }}
-                                </span>
-                            </td>
-
-                            <td>
-                                <i class="bi" :class="guest.cform ? 'bi-hand-thumbs-up text-success'
-                                    : 'bi-hand-thumbs-down text-danger'">
-                                </i>
-                            </td>
-
-                            <td>
-                                <span :class="guest.regCard ? 'text-success'
-                                    : 'text-danger fw-bold'">
-                                    {{ guest.regCard ? 'Signed' : 'Not Signed' }}
-                                </span>
-                            </td>
-
-                            <td>{{ guest.infoFolio }}</td>
-
-                            <td>{{ guest.chargeSlip }}</td>
-
-                            <td>{{ guest.invoices }}</td>
-
-                            <td>
-                                <span>
-                                    {{ guest.reservation }} / {{ guest.identification }}
-                                </span>
-
-                                
-                            </td>
-
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-
-
-</template>
-<script setup>
-import { ref } from 'vue';
-import Navbar from '../navbar/Navbar.vue';
-import DocumentProps from '../DocumentProps.vue';
-
-const guests = ref([
-    {
-        confirmation: "8494797002",
-        crs: "....F121896876",
-        name: "Christiana B...",
-        period: "21/02/25",
-        room: 475,
-        guests: 1,
-        reservation: "Booked",
-        identification: "Passport",
-        cform: true,
-        regCard: true,
-        infoFolio: 3,
-        chargeSlip: 3,
-        invoices: 3,
-        verified: true,
-        time: "21/02 17:12"
-    },
-    {
-        confirmation: "8494797002",
-        crs: "....F121896876",
-        name: "Ronaldo...",
-        period: "21/02/25",
-        room: 475,
-        guests: 1,
-        reservation: "Checked in",
-        identification: " Aadhar",
-        cform: true,
-        regCard: true,
-        infoFolio: 3,
-        chargeSlip: 3,
-        invoices: 3,
-        verified: true,
-        time: "21/02 17:12"
-    },
-    {
-        confirmation: "8494797002",
-        crs: "....F121896876",
-        name: "Messi...",
-        period: "21/02/25",
-        room: 475,
-        guests: 1,
-        reservation: "Due in",
-        identification: "No identity",
-        cform: true,
-        regCard: true,
-        infoFolio: 3,
-        chargeSlip: 3,
-        invoices: 3,
-        verified: true,
-        time: "21/02 17:12"
-    }
-])
-
-
-const reservationClass = (status) => {
-    return {
-        'text-primary': status === 'Booked',
-        'text-success': status === 'Checked in',
-        'text-warning': status === 'Due in',
-        'text-danger': status === 'Checked out'
-    }
-}
-const identificationClass = (type) => {
-    return {
-        'text-success': type === 'Passport',
-        'text-danger': type === 'Aadhar',
-        'text-warning': type === 'No identity'
-    }
-}
-</script>
-
-
-<style>
-.bgclr {
-    background-color: var(--bg-clr);
-}
-</style> -->
-
 <template>
     <Navbar />
     <div class="bgclr">
         <DocumentProps name="Documents" />
         <div class="">
-            <div class="table-responsive">
-                <table class="table table-hover ">
+            <div class="table-responsive container-fluid ">
+                <table class="table table-striped table-bordered ">
                     <thead>
-                        <tr>
+                        <tr style="font-size: 13px;">
                             <th>#</th>
                             <th><i class="ri-arrow-down-s-line"></i></th>
                             <th>Confirmation</th>
@@ -203,15 +25,19 @@ const identificationClass = (type) => {
                             <th>DM Verified</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody style="font-size: 13px; font-weight: 500;">
                         <tr v-for="(guest, index) in guests" :key="index">
                             <td>{{ index + 1 }}</td>
                             <td></td>
-                            <td class="fw-bold">
+                            <td class="fw-semibold">
                                 {{ guest.confirmation }}
                             </td>
                             <td>{{ guest.crs }}</td>
-                            <td>{{ guest.name }}</td>
+                            <td>{{ guest.name }}
+                                <span v-if="guest.regCard==true">
+                                    <img :src="plane" alt="">
+                                </span>
+                            </td>
                             <td>{{ guest.period }}</td>
                             <td>{{ guest.room }}</td>
                             <td>{{ guest.guests }}</td>
@@ -227,12 +53,23 @@ const identificationClass = (type) => {
                             </td>
 
                             <td>
-                                {{ guest.cform }}
+                                <span v-if="guest.cform===true" style="color: #17C400;font-size: 15px;">
+                                    <i class="ri-thumb-up-line"></i>
+                                </span>
+                                <span v-else style="color: #FF0000; font-size: 15px;" >
+                                    <i class="ri-thumb-down-line"></i>
+                                </span>
                             </td>
 
                             <td>
                                 <span >
-                                    {{ guest.regCard ? 'Signed' : 'Not Signed' }}
+                                    <span v-if="guest.regCard==true" style="color: #17C400;">
+                                        Signed
+                                    </span>
+                                    <span v-else style="color: #FF0000;">
+                                        Not Signed
+                                    </span>
+                                    <!-- {{ guest.regCard ? 'Signed' : 'Not Signed' }} -->
                                 </span>
                             </td>
 
@@ -242,8 +79,12 @@ const identificationClass = (type) => {
 
                             <td>
                                 <span>
-                                    <span v-if="guest.verified == true">hi</span>
-                                    <span v-else></span>
+                                    <span v-if="guest.verified == true">
+                                        <img :src="correct" alt="" >
+                                    </span>
+                                    <span v-else>
+                                        <img :src="wrong" alt="">
+                                    </span>
                                     {{ guest.time }}
                                 </span>
                             </td>
@@ -262,12 +103,15 @@ const identificationClass = (type) => {
 import { ref } from 'vue'
 import Navbar from '../navbar/Navbar.vue'
 import DocumentProps from '../DocumentProps.vue'
+import correct from '../../assets/correct.png'
+import wrong from '../../assets/wrong.png'
+import plane from '../../assets/plane.png'
 
 const guests = ref([
     {
         confirmation: "8494797002",
         crs: "....F121896876",
-        name: "Christiana B...",
+        name: "Christian",
         period: "21/02/25",
         room: 475,
         guests: 1,
@@ -284,13 +128,13 @@ const guests = ref([
     {
         confirmation: "8494797002",
         crs: "....F121896876",
-        name: "Ronaldo...",
+        name: "Ronaldo",
         period: "21/02/25",
         room: 475,
         guests: 1,
         reservation: "Checked in",
         identification: "Aadhar",
-        cform: true,
+        cform: false,
         regCard: true,
         infoFolio: 3,
         chargeSlip: 3,
@@ -301,7 +145,7 @@ const guests = ref([
     {
         confirmation: "8494797002",
         crs: "....F121896876",
-        name: "Messi...",
+        name: "Messi",
         period: "21/02/25",
         room: 475,
         guests: 1,
