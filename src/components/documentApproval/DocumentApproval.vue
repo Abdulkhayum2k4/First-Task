@@ -54,10 +54,10 @@
           <tr>
             <td></td>
             <td><All /></td>
-            <td><searchInput /></td>
-            <td><searchInput /></td>
+            <td><SearchInput /></td>
+            <td><SearchInput /></td>
             <td><DatePicker /></td>
-            <td><searchInput /></td>
+            <td><SearchInput /></td>
             <td><All /></td>
             <td><All /></td>
             <td></td>
@@ -159,7 +159,7 @@ import Navbar from "../navbar/Navbar.vue";
 import DocumentProps from "../DocumentProps.vue";
 import Approval from "../documentApproval/Approval.vue";
 import All from "../dropdowns/AllDropdown.vue";
-import searchInput from "../dropdowns/searchInput.vue";
+import SearchInput from "../dropdowns/SearchInput.vue";
 import DatePicker from "../dropdowns/DatePicker.vue";
 import plane from "../../assets/plane.png";
 import warning from "../../assets/warning.png";
