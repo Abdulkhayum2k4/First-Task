@@ -28,15 +28,13 @@ defineProps({
 
   background: white;
   border-radius: 10px;
-
   min-width: 0;
-
   flex-grow: 1;
   flex-basis: auto;
 }
 
 .separator {
-  width: 2px;
+  width: 1px;
   height: 60px;
 
   background-color: #d1d5db;
