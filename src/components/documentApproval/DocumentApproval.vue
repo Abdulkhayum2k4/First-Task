@@ -147,6 +147,7 @@
       </table>
     </div>
 
+    <sortInput />
     <div class="three_icons position-relative">
       <ThreeIcons class="dots position-absolute" />
     </div>
@@ -166,6 +167,7 @@ import warning from "../../assets/warning.png";
 import trueee from "../../assets/trueee.png";
 import nooo from "../../assets/nooo.png";
 import ThreeIcons from "../threeIcons/ThreeIcons.vue";
+import sortInput from "../dropdowns/sortInput.vue";
 
 const documents = ref([
   {
