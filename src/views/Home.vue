@@ -9,7 +9,7 @@
 <script setup>
 import Navbar from "../components/navbar/Navbar.vue";
 import Document from "../components/Document.vue";
-import Approval from "../components/documentApproval/document/Approval.vue";
+import Approval from "../components/documentApproval/Approval.vue";
 </script>
 
 <style scoped>
