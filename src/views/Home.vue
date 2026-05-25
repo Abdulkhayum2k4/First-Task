@@ -14,6 +14,6 @@ import Approval from "../components/documentApproval/Approval.vue";
 
 <style scoped>
 .bgclr {
-  background-color: #eceff6;
+  background-color: var(--bg-clr);
 }
 </style>
