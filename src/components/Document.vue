@@ -29,8 +29,8 @@
   </div>
 </template>
 
-
 <style scoped>
+
 .redclr{
   color: var(--primary-red) !important;
 }
