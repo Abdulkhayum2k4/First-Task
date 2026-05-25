@@ -29,7 +29,6 @@ defineProps({
 <style scoped>
 .sub-card {
   padding: 10px;
-  min-width: 0;
 }
 
 .count {
