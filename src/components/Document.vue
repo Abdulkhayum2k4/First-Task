@@ -1,5 +1,5 @@
 <template>
-    <div class="bgclr vh-100 pt-2 container-fluid">
+    <div class="pt-2 container-fluid">
     <div class="d-flex justify-content-between ">
 
       <div class="">
@@ -9,8 +9,10 @@
       </div>
       <div class="d-flex gap-2">
         <div class="d-flex gap-2 px-2 pt-2 redclr fw-semibold" >
-          <i class="ri-restart-line"></i>
-          <span>Refresh</span>
+          <a href="" class="redclr text-decoration-none">
+            <i class="ri-restart-line fw-light pe-1"></i>
+          <span class="fw-bold ">Refresh</span>
+          </a>
         </div>
         <div class="d-flex bg-white gap-4 px-2 align-items-center align-self-center justify-content-center border border-secondary rounded rounded-1">
           <span>Past 7 days</span>
@@ -28,11 +30,8 @@
 </template>
 
 
-<style>
-.bgclr {
-  background-color: #eceff6;
-}
+<style scoped>
 .redclr{
-  color: var(--primary-red);
+  color: var(--primary-red) !important;
 }
 </style>
