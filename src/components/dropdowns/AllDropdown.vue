@@ -1,6 +1,5 @@
 <template>
   <div class="wid">
-
     <select v-model="selectedOption" class="rounded rounded-1 border-0 p-1">
       <option value="All">All</option>
       <option value="Frontend">Frontend</option>
