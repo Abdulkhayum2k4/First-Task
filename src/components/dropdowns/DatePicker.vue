@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="abc pb-3">
     <VueDatePicker v-model="date" range placeholder="dd/mm/yy-dd/mm/yy" />
   </div>
@@ -17,4 +17,6 @@ const date = ref([]);
   /* height: 28px; */
   width: 165px;
 }
-</style>
+</style> -->
+
+<template></template>
