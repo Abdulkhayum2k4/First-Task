@@ -1,8 +1,8 @@
 <script setup>
-import Practice from "../views/Practice.vue";
+import DocumentProps from './DocumentProps.vue';
 const names = "Document Approval";
 </script>
 
 <template>
-  <Practice :name="names"/>
+  <DocumentProps :name="names"/>
 </template>
