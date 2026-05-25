@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <VueDatePicker v-model="date" range placeholder="dd/mm/yy-dd/mm/yy" />
 </template>
 
@@ -8,4 +8,5 @@ import { VueDatePicker } from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
 
 const date = ref([]);
-</script>
+</script> -->
+<template></template>
