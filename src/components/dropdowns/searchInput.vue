@@ -1,15 +1,12 @@
 <template>
-  <div class="position-relative d-inline-block">
+  <div class="searchInput d-flex justify-content-between align-items-center bg-white ">
     <input
       type="text"
       v-model="search"
-      class="form-control border-0 pe-5"
-      placeholder="Search"
+      class="rounded rounded-1 border-0 "
+      placeholder="search"
     />
-
-    <i
-      class="ri-search-line position-absolute top-50 end-0 translate-middle-y me-3"
-    ></i>
+    <i class="ri-search-line pe-3"></i>
   </div>
 </template>
 
@@ -18,3 +15,20 @@ import { ref } from "vue";
 
 const search = ref("");
 </script>
+
+<style scoped>
+input {
+  padding: 10px;
+  background-color: transparent;
+  width: 70px;
+}
+.searchInput{
+  height: 28px;
+  width: 101px;
+}
+input:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+</style>
