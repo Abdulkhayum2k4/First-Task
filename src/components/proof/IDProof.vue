@@ -1,12 +1,19 @@
 <template>
   <ProofHeader />
-  <div class="container-fluid ">
+  <div class="container-fluid">
     <div class="row sidebar vh-100">
       <div class="col-2 p-0">
         <div class="p-3">
-          <div v-for="item in menuItems" :key="item.name" class="menu-item rounded" :class="{ active: item.active }">
-            <div class="d-flex justify-content-between align-items-center w-100 ">
-              <div class="d-flex align-items-center gap-2 ">
+          <div
+            v-for="item in menuItems"
+            :key="item.name"
+            class="menu-item rounded"
+            :class="{ active: item.active }"
+          >
+            <div
+              class="d-flex justify-content-between align-items-center w-100"
+            >
+              <div class="d-flex align-items-center gap-2">
                 <span v-if="item.alert == true" class="">{{ item.name }}</span>
                 <span v-else>{{ item.name }}</span>
               </div>
@@ -32,12 +39,20 @@
       </div>
     </div>
     <div class="three_icons position-relative">
-      <ThreeIcons class="dots position-absolute bottom-0 start-0 pe-3 pb-3" />
+      <ThreeIcons
+        class="dots position-absolute bottom-0 start-0 pe-3 pb-3 ms-5 mb-3"
+      />
     </div>
     <div class="position-relative">
-      <button class="btn btn-danger position-absolute bottom-0 end-0 me-5 mb-5">Actions</button>
+      <button class="btn btn-danger position-absolute bottom-0 end-0 me-5 mb-5">
+        Actions
+      </button>
     </div>
   </div>
+
+  <button class="btn btn-primary" @click="showModal = true">Open Modal</button>
+
+  <LongModal v-if="showModal" @close="showModal = false"> </LongModal>
 </template>
 
 <script setup>
@@ -48,6 +63,9 @@ import ProofCards from "./ProofCards.vue";
 import ProofHeader from "./ProofHeader.vue";
 import ThreeIcons from "../threeIcons/ThreeIcons.vue";
 
+import { ref } from "vue";
+import LongModal from "./LongModal.vue";
+const showModal = ref(false);
 const menuItems = [
   {
     name: "ID Proof",
