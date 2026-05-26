@@ -19,13 +19,13 @@
                 }}</span>
                 <span v-else>{{ item.name }}</span>
               </div>
-              <span v-if="item.alert" class="pe-3">
+              <span v-if="item.alert">
                 <img :src="warning" />
               </span>
-              <span v-if="item.completed" class="text-dark pe-3">
+              <span v-if="item.completed" class="text-dark">
                 <img :src="blacktick" />
               </span>
-              <span v-if="item.anywarning" class="pe-3">
+              <span v-if="item.anywarning">
                 <img :src="blackwarning" />
               </span>
             </div>
@@ -35,7 +35,7 @@
 
       <div class="col-10 p-3">
         <div class="bg-white h-100 rounded rounded-3">
-          <ProofCards />
+          <MissingProofs />
         </div>
       </div>
     </div>
@@ -50,7 +50,6 @@
       </button>
     </div>
   </div>
-
 </template>
 
 <script setup>
@@ -60,8 +59,7 @@ import blacktick from "../../assets/blacktick.png";
 import ProofCards from "./ProofCards.vue";
 import ProofHeader from "./ProofHeader.vue";
 import ThreeIcons from "../threeIcons/ThreeIcons.vue";
-
-
+import MissingProofs from "./MissingProofs.vue";
 
 const menuItems = [
   {
@@ -106,14 +104,12 @@ const menuItems = [
   font-size: 18px;
   color: #222;
 }
-
 .menu-item.active {
   background: #ffecec;
   color: #ff4d4f;
   border-left: 4px solid #ff4d4f;
   font-weight: 600;
 }
-
 .menu-item:hover {
   background: #f0f0f0;
 }

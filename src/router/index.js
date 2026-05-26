@@ -5,6 +5,7 @@ import DocumentReservation from "../components/documents/DocumentReservation.vue
 import DocumentApproval from "../components/documentApproval/DocumentApproval.vue";
 import IDProof from "../components/proof/IDProof.vue";
 import MissingProofs from "../components/proof/MissingProofs.vue";
+import DefaultLayout from "../components/proof/DefaultLayout.vue";
 
 const routes = [
   {
@@ -28,8 +29,8 @@ const routes = [
     component: IDProof,
   },
   {
-    path:"/missingproofs",
-    component:MissingProofs,
+    path: "/defaultLayout",
+    component: DefaultLayout,
   },
 ];
 
