@@ -3,8 +3,7 @@ import Home from "../views/Home.vue";
 import Practice from "../views/Practice.vue";
 import DocumentReservation from "../components/documents/DocumentReservation.vue";
 import DocumentApproval from "../components/documentApproval/DocumentApproval.vue";
-// import IDProof from "../components/proof/IDProof.vue";
-import ProofHeader from "../components/proof/ProofHeader.vue";
+import IDProof from "../components/proof/IDProof.vue";
 
 const routes = [
   {
@@ -25,7 +24,7 @@ const routes = [
   },
   {
     path: "/idProof",
-    component: ProofHeader,
+    component: IDProof,
   },
 ];
 
