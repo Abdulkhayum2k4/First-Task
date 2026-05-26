@@ -19,13 +19,13 @@
                 }}</span>
                 <span v-else>{{ item.name }}</span>
               </div>
-              <span v-if="item.alert">
+              <span v-if="item.alert" class="pe-3">
                 <img :src="warning" />
               </span>
-              <span v-if="item.completed" class="text-dark">
+              <span v-if="item.completed" class="text-dark pe-3">
                 <img :src="blacktick" />
               </span>
-              <span v-if="item.anywarning">
+              <span v-if="item.anywarning" class="pe-3">
                 <img :src="blackwarning" />
               </span>
             </div>
