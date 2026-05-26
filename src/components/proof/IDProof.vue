@@ -1,9 +1,9 @@
 <template>
   <ProofHeader />
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-2 sidebar p-0">
-        <div class="pt-3">
+    <div class="row sidebar">
+      <div class="col-2 p-0">
+        <div class="p-3">
           <div
             v-for="item in menuItems"
             :key="item.name"
@@ -16,24 +16,25 @@
               <div class="d-flex align-items-center gap-2">
                 <span>{{ item.name }}</span>
                 <span v-if="item.alert">
-                  <img :src="warning" alt="" />
+                  <img :src="warning" />
                 </span>
               </div>
 
               <span v-if="item.completed" class="text-dark">
-                <img :src="blacktick" alt="" />
+                <img :src="blacktick" />
               </span>
               <span v-if="item.anywarning">
-                <img :src="blackwarning" alt="" />
+                <img :src="blackwarning" />
               </span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-10 p-4">
-        <!-- Right  -->
-        <ProofCards />
+      <div class="col-10 p-3">
+        <div class="bg-white h-100 rounded rounded-3">
+          <ProofCards />
+        </div>
       </div>
     </div>
   </div>
@@ -82,7 +83,7 @@ const menuItems = [
 
 <style scoped>
 .sidebar {
-  background: #f4f5fa;
+  background: var(--bg-clr);
 }
 
 .menu-item {
