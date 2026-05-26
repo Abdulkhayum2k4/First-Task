@@ -50,7 +50,6 @@
       </button>
     </div>
   </div>
-
 </template>
 
 <script setup>
@@ -60,8 +59,6 @@ import blacktick from "../../assets/blacktick.png";
 import ProofCards from "./ProofCards.vue";
 import ProofHeader from "./ProofHeader.vue";
 import ThreeIcons from "../threeIcons/ThreeIcons.vue";
-
-
 
 const menuItems = [
   {

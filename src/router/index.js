@@ -4,6 +4,7 @@ import Practice from "../views/Practice.vue";
 import DocumentReservation from "../components/documents/DocumentReservation.vue";
 import DocumentApproval from "../components/documentApproval/DocumentApproval.vue";
 import IDProof from "../components/proof/IDProof.vue";
+import DefaultLayout from "../components/proof/DefaultLayout.vue";
 
 const routes = [
   {
@@ -25,6 +26,10 @@ const routes = [
   {
     path: "/idProof",
     component: IDProof,
+  },
+  {
+    path: "/defaultLayout",
+    component: DefaultLayout,
   },
 ];
 

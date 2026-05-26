@@ -1,36 +1,38 @@
+<script setup>
+import user from "../../assets/user.png";
+</script>
+
 <template>
   <div class="overlay">
-
     <!-- Modal -->
     <div class="custom-modal">
-
       <!-- Header -->
-      <div class="modal-header-custom">
-        <div>
-          <h4 class="mb-0">Long Aadhar ID</h4>
-          <small class="text-muted">Main Guest</small>
+      <div class="modal-header-custom d-flex justify-content-between">
+        <div class="d-flex">
+          <div class="d-flex w-100">
+            <img :src="user">
+            <div>
+              <p class="fw-bold">Glenn Maxwell</p>
+              <p>Main Guest</p>
+            </div>
+          </div>
+          <div>
+            <!-- <h4 class="mb-0">Long Aadhar ID</h4> -->
+             <select name=""></select>
+          </div>
         </div>
 
-        <button
-          class="close-btn"
-          @click="$emit('close')"
-        >
-          ✕
-        </button>
+        <button class="close-btn" @click="$emit('close')">✕</button>
       </div>
 
       <!-- Body -->
       <div class="modal-body-custom row g-0">
-
         <!-- LEFT SIDE -->
         <div class="col-lg-6 border-end">
-
           <div class="left-container">
-
             <h5 class="mb-3">Long Aadhar ID</h5>
 
             <div class="upload-box">
-
               <img
                 src="https://cdn-icons-png.flaticon.com/512/685/685655.png"
                 width="120"
@@ -42,37 +44,25 @@
                 for guest to check in
               </p>
 
-              <button class="btn btn-danger px-4 mt-2">
-                Scan
-              </button>
+              <button class="btn btn-danger px-4 mt-2">Scan</button>
 
               <p class="mt-4 mb-2">(or)</p>
 
-              <a href="#" class="upload-link">
-                Upload
-              </a>
-
+              <a href="#" class="upload-link"> Upload </a>
             </div>
-
           </div>
-
         </div>
 
         <!-- RIGHT SIDE -->
         <div class="col-lg-6">
-
           <div class="right-container">
-
             <div class="d-flex justify-content-between mb-4">
               <h5>Aadhar Details</h5>
 
-              <p class="text-danger mb-0">
-                Missing fields
-              </p>
+              <p class="text-danger mb-0">Missing fields</p>
             </div>
 
             <div class="row g-3">
-
               <div class="col-md-6">
                 <input
                   type="text"
@@ -88,17 +78,11 @@
               </div>
 
               <div class="col-md-6">
-                <input
-                  type="date"
-                  class="form-control"
-                />
+                <input type="date" class="form-control" />
               </div>
 
               <div class="col-md-6">
-                <input
-                  type="date"
-                  class="form-control"
-                />
+                <input type="date" class="form-control" />
               </div>
 
               <div class="col-md-6">
@@ -136,38 +120,24 @@
                   <option>Purpose of visit</option>
                 </select>
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
 
       <!-- Footer -->
       <div class="modal-footer-custom">
+        <p class="mb-0 text-muted">No document attached</p>
 
-        <p class="mb-0 text-muted">
-          No document attached
-        </p>
-
-        <button class="btn btn-danger">
-          Save Details
-        </button>
-
+        <button class="btn btn-danger">Save Details</button>
       </div>
-
     </div>
-
   </div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style scoped>
-
 .overlay {
   position: fixed;
   inset: 0;
@@ -186,7 +156,6 @@
   height: 100vh;
 
   background: white;
-
 
   overflow: hidden;
 
@@ -278,7 +247,6 @@
 /* RESPONSIVE */
 
 @media (max-width: 992px) {
-
   .custom-modal {
     width: 95%;
     height: 95vh;
@@ -287,7 +255,5 @@
   .upload-box {
     height: 300px;
   }
-
 }
-
 </style>
