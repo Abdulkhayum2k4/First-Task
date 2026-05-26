@@ -4,16 +4,15 @@
     <div class="row sidebar vh-100">
       <div class="col-2 p-0">
         <div class="p-3">
-          <div v-for="item in menuItems" :key="item.name" class="menu-item rounded" :class="{ active: item.active }">
+          <div v-for="item in menuItems" :key="item.name" class="menu-item rounded py-2 fs-6" :class="{ active: item.active }">
             <div class="d-flex justify-content-between align-items-center w-100 ">
               <div class="d-flex align-items-center gap-2 ">
-                <span v-if="item.alert == true" class="">{{ item.name }}</span>
+                <span v-if="item.alert == true" class="ps-1 ms-1">{{ item.name }}</span>
                 <span v-else>{{ item.name }}</span>
               </div>
               <span v-if="item.alert">
                 <img :src="warning" />
               </span>
-
               <span v-if="item.completed" class="text-dark">
                 <img :src="blacktick" />
               </span>
@@ -88,7 +87,7 @@ const menuItems = [
 }
 
 .menu-item {
-  padding: 14px 12px;
+  /* padding: 14px 12px; */
   font-size: 18px;
   color: #222;
 }
