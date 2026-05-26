@@ -56,10 +56,26 @@
                     <img :src="india" alt="" />
                     Indian ID
                   </div>
+                  <div class="position-relative">
+                    <button
+                      class="btn btn-sm border-0 p-0 fw-bold fs-6"
+                      style="color: var(--primary-red)"
+                      @click="guest.showDropdown = !guest.showDropdown"
+                    >
+                      + Add
+                    </button>
 
-                  <p class="mb-0 fw-bold" style="color: var(--primary-red)">
-                    + Add
-                  </p>
+                    <div
+                      v-if="guest.showDropdown"
+                      class="custom-dropdown shadow"
+                    >
+                      <p>Long Aadhar</p>
+                      <p>Short Aadhar</p>
+                      <p>Driving License</p>
+                      <p>Voter ID</p>
+                      <p>Passport</p>
+                    </div>
+                  </div>
                 </div>
 
                 <div
@@ -111,27 +127,56 @@
   </div>
 </template>
 <script setup>
+import { ref } from "vue";
+
 import user from "../../assets/user.png";
 import india from "../../assets/india.png";
 import world from "../../assets/world.png";
 import redwarning from "../../assets/redwarning.png";
 
-const guests = [
+const guests = ref([
   {
     name: "Glen Maxwell",
     type: "Main Guest",
     checked: true,
+    showDropdown: false,
   },
   {
     name: "Guest 2",
     type: "",
     checked: false,
+    showDropdown: false,
   },
-];
+]);
 </script>
 
 <style scoped>
 .widthchange {
   width: 340px;
+}
+.card {
+  overflow: visible !important;
+}
+
+.custom-dropdown {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  width: 180px;
+  background: white;
+  border-radius: 12px;
+  padding: 10px 0;
+  z-index: 9999;
+}
+
+.custom-dropdown p {
+  padding: 10px 16px;
+  margin: 0;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.custom-dropdown p:hover {
+  background-color: #f5f5f5;
 }
 </style>
