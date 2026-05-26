@@ -1,10 +1,99 @@
 <template>
     <header>
-        <ul class="list-unstyled d-flex">
-            <li>ID Prood</li>
-            <li>Missing Proofs</li>
+        <ul class="list-unstyled d-flex gap-4 mb-3 px-3 py-2  border-bottom">
+            <li class="fw-bold">ID Prood</li>
+            <li style="color: var(--primary-red);" class="fw-semibold"><img :src="redwarning" alt=""> Missing Proofs</li>
         </ul>
     </header>
+    <div class="">
+        <div class="container-fluid  px-3 py-2">
+            <div class="row g-3">
+                <div class="col-auto" v-for="(guest, index) in guests" :key="index" >
+                    <div class="card rounded-3 shadow-sm widthchange border" style="background-color: #fafafa;"> 
+                        <div class="card-body border-bottom d-flex align-items-center px-3 py-2" style="height: 60px;">
+
+                            <img :src="user" class="rounded-circle me-2" width="35" height="35" />
+
+                            <div class="flex-grow-1">
+                                <p class="mb-0 fw-bold" style="font-size: 14px;">{{ guest.name }}</p>
+                                <p class="text-primary mb-0" style="font-size: 12px;">{{ guest.type }}</p>
+                            </div>
+
+                            <div class="status-width text-end" style="width: 90px;">
+                                <span v-if="guest.checked" class=" fw-semibold small"  style="color: #17C400; font-size: 14px;">
+                                    Pre checked
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="p-2">
+                            <div class="p-2 border-bottom">
+
+                                <div class="border rounded-3 px-3 py-2 mb-2 d-flex justify-content-between align-items-center bg-white" style="height: 34px;">
+                                    <div class="fw-semibold text-warning">
+                                        <img :src="india" alt="">
+                                        Indian ID
+                                    </div>
+                                    
+                                    <p class=" mb-0 fw-bold" style="color: var(--primary-red);">
+                                        + Add
+                                    </p>
+                                </div>
+                                
+                                <div class="border rounded-3 px-3 py-2 mb-2 d-flex justify-content-between align-items-center bg-white" style="height: 34px;">
+                                    <div class="fw-semibold " style="color: #CF6E14">
+                                        <img :src="world" alt="">
+                                        Foreign ID
+                                    </div>
+                                    
+                                    <p class=" mb-0 fw-bold" style="color: var(--primary-red);">
+                                        + Add
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3" >
+                                <h6 class="mb-0 fw-bold">Face Image</h6>
+
+                                <div class="d-flex gap-2">
+                                    <button class=" px-2 py-1 rounded bg-white fw-semibold" style="border:2px solid var(--primary-red); color:var(--primary-red)">
+                                        Snap
+                                    </button>
+
+                                    <button class=" px-2 py-1 rounded bg-white fw-semibold" style="border:2px solid var(--primary-red); color:var(--primary-red); " >
+                                        Upload
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
-<script>
+<script setup>
+import user from '../../assets/user.png'
+import india from '../../assets/india.png'
+import world from '../../assets/world.png'
+import redwarning from '../../assets/redwarning.png'
+
+const guests = [
+    {
+        name: "Glen Maxwell",
+        type: "Main Guest",
+        checked: true,
+    },
+    {
+        name: "Guest 2",
+        type: "",
+        checked: false,
+    },
+];
 </script>
+
+
+<style scoped>
+.widthchange {
+    width: 340px;
+}
+</style>

@@ -35,7 +35,7 @@
 </template>
 
 <script setup>
-import warning from '../../assets/warning.png'
+import warning from '../../assets/redwarning.png'
 import blackwarning from '../../assets/blackwarning.png' 
 import blacktick from '../../assets/blacktick.png'
 import ProofCards from './ProofCards.vue'
