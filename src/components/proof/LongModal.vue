@@ -1,6 +1,11 @@
 <script setup>
+import { ref } from "vue";
 import user from "../../assets/user.png";
 import printer from "../../assets/printer.png";
+import longAadhar from "../../assets/longAadhar.jpg";
+import deleteIcon from "../../assets/deleteIcon.png";
+
+const showAadhar = ref(false);
 </script>
 
 <template>
@@ -33,17 +38,42 @@ import printer from "../../assets/printer.png";
         <!-- LEFT SIDE -->
         <div class="col-lg-6 border-end">
           <div class="left-container">
-            <h5 class="mb-3">Long Aadhar ID</h5>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="mb-0">Long Aadhar ID</h5>
+              <div v-if="showAadhar" class="d-flex gap-2">
+                <button
+                  class="btn text-danger fw-bold"
+                  @click="showAadhar = false"
+                >
+                  <img :src="deleteIcon" class="w-25" />
+                  Delete
+                </button>
+                <button class="btn text-primary fw-bold" @click="showAadhar = true">
+                  Reupload
+                </button>
+                <button class="btn text-primary fw-bold">Rescan</button>
+              </div>
+            </div>
             <div class="upload-box">
-              <img :src="printer" width="120" />
-              <p class="text-center mt-3">
-                Scan or upload visa documents
-                <br />
-                for guest to check in
-              </p>
-              <button class="btn btn-danger px-4 mt-2">Scan</button>
-              <p class="mt-4 mb-2">(or)</p>
-              <a href="#" class="upload-link">Upload</a>
+              <template v-if="showAadhar">
+                <img :src="longAadhar" class="uploaded-preview" />
+              </template>
+              <template v-else>
+                <img :src="printer" width="120" />
+                <p class="text-center mt-3">
+                  Scan or upload visa documents
+                  <br />
+                  for guest to check in
+                </p>
+                <button class="btn btn-danger px-4 mt-2">Scan</button>
+                <p class="mt-4 mb-2">(or)</p>
+                <a
+                  href="#"
+                  class="upload-link"
+                  @click.prevent="showAadhar = true"
+                  >Upload</a
+                >
+              </template>
             </div>
           </div>
         </div>
@@ -150,7 +180,9 @@ import printer from "../../assets/printer.png";
               </div>
             </div>
             <div class="modal-footer-custom w-100 p-0">
-              <p class="mb-0 text-muted p-3 ms-2">No document attached</p>
+              <p class="mb-0 text-muted p-3 ms-2 fw-bold">
+                No document attached
+              </p>
               <button class="btn btn-danger m-1 me-4">Save Details</button>
             </div>
           </div>
@@ -220,12 +252,12 @@ import printer from "../../assets/printer.png";
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   z-index: 9999;
 }
 .custom-modal {
-  width: 90%;
+  width: 85%;
   height: 100vh;
   background: white;
   overflow: hidden;
@@ -268,11 +300,15 @@ import printer from "../../assets/printer.png";
 }
 /* FOOTER */
 .modal-footer-custom {
-  border-top: 1px solid #ddd;
-  /* padding: 15px 20px; */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.uploaded-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .upload-link {

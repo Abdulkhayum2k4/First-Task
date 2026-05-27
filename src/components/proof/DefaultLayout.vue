@@ -36,6 +36,7 @@
       <div class="col-10 p-3">
         <div class="bg-white h-100 rounded rounded-3">
           <MissingProofs />
+          <!-- <ProofCards /> -->
         </div>
       </div>
     </div>
