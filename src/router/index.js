@@ -8,6 +8,7 @@ import DefaultLayout from "../components/proof/DefaultLayout.vue";
 import Dummy from "../components/proof/Dummy.vue";
 import DummyTwo from "../components/proof/DummyTwo.vue";
 import DummyThree from "../components/proof/DummyThree.vue";
+import Folios from "../components/proof/Folios.vue";
 
 const routes = [
   {
@@ -46,6 +47,11 @@ const routes = [
     path: "/dummythree",
     component: DummyThree,
   },
+  {
+    path: "/Folios",
+    component: Folios,
+  },
+  
 ];
 
 const router = createRouter({
