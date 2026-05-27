@@ -9,9 +9,14 @@ import Dummy from "../components/proof/Dummy.vue";
 import DummyTwo from "../components/proof/DummyTwo.vue";
 import DummyThree from "../components/proof/DummyThree.vue";
 import Folios from "../components/proof/Folios.vue";
+<<<<<<< HEAD
 import PaymentDetailsDummy from "../components/proof/PaymentDetailsDummy.vue";
 import PaymentsDummy from "../components/proof/PaymentsDummy.vue";
 import AdvanceDummy from "../components/proof/AdvanceDummy.vue";
+=======
+import Promotions from "../components/proof/Promotions.vue"
+
+>>>>>>> 00b8e33312580725ec3280a71dc28ec3ef1e48a8
 const routes = [
   {
     path: "/",
@@ -54,6 +59,7 @@ const routes = [
     component: Folios,
   },
   {
+<<<<<<< HEAD
     path: "/paymentdetailsdummy",
     component: PaymentDetailsDummy,
   },{
@@ -63,6 +69,11 @@ const routes = [
     path: "/advancedummy",
     component: AdvanceDummy,
   },
+=======
+    path:"/promotions",
+    component: Promotions
+  }
+>>>>>>> 00b8e33312580725ec3280a71dc28ec3ef1e48a8
   
 ];
 
