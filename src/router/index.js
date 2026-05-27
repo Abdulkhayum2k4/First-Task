@@ -9,6 +9,7 @@ import Dummy from "../components/proof/Dummy.vue";
 import DummyTwo from "../components/proof/DummyTwo.vue";
 import DummyThree from "../components/proof/DummyThree.vue";
 import Folios from "../components/proof/Folios.vue";
+import Promotions from "../components/proof/Promotions.vue"
 
 const routes = [
   {
@@ -51,6 +52,10 @@ const routes = [
     path: "/Folios",
     component: Folios,
   },
+  {
+    path:"/promotions",
+    component: Promotions
+  }
   
 ];
 
