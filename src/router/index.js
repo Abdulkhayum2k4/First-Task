@@ -4,7 +4,6 @@ import Practice from "../views/Practice.vue";
 import DocumentReservation from "../components/documents/DocumentReservation.vue";
 import DocumentApproval from "../components/documentApproval/DocumentApproval.vue";
 import IDProof from "../components/proof/IDProof.vue";
-import MissingProofs from "../components/proof/MissingProofs.vue";
 import DefaultLayout from "../components/proof/DefaultLayout.vue";
 import Dummy from "../components/proof/Dummy.vue";
 import DummyTwo from "../components/proof/DummyTwo.vue";
