@@ -9,7 +9,7 @@ import Ellipse_656 from "../../assets/Ellipse_656.png";
 </script>
 
 <template>
-  <div class="d-flex justify-content-between p-4 whole">
+  <div class="d-flex justify-content-between px-4 py-2 whole">
     <div class="d-flex align-items-center">
       <i class="ri-arrow-left-line pe-3 fs-1"></i>
       <div class="d-flex">
