@@ -6,6 +6,7 @@ import DocumentApproval from "../components/documentApproval/DocumentApproval.vu
 import IDProof from "../components/proof/IDProof.vue";
 import MissingProofs from "../components/proof/MissingProofs.vue";
 import DefaultLayout from "../components/proof/DefaultLayout.vue";
+import Dummy from "../components/proof/Dummy.vue";
 
 const routes = [
   {
@@ -31,6 +32,10 @@ const routes = [
   {
     path: "/defaultLayout",
     component: DefaultLayout,
+  },
+  {
+    path: "/dummy",
+    component: Dummy,
   },
 ];
 
