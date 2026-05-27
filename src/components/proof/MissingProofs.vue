@@ -106,14 +106,20 @@
                     <div class="d-flex gap-2">
                       <button
                         class="px-2 py-1 rounded bg-white fw-semibold"
-                        style="border: 2px solid var(--primary-red); color: var(--primary-red);"
+                        style="
+                          border: 2px solid var(--primary-red);
+                          color: var(--primary-red);
+                        "
                         @click="guest.visaUploaded = true"
                       >
                         Upload
                       </button>
                       <button
                         class="px-2 py-1 rounded bg-white fw-semibold"
-                        style="border: 2px solid var(--primary-red); color: var(--primary-red);"
+                        style="
+                          border: 2px solid var(--primary-red);
+                          color: var(--primary-red);
+                        "
                       >
                         Scan
                       </button>
@@ -150,9 +156,16 @@
                 <div class="p-3 border-bottom">
                   <div
                     class="d-flex justify-content-between p-2 rounded"
-                    style="border-style: dashed !important; border: 2px solid #005bd3;"
+                    style="
+                      border-style: dashed !important;
+                      border: 2px solid #005bd3;
+                    "
                   >
-                    <p class="mb-0 fw-semibold">
+                    <p
+                      class="mb-0 fw-semibold"
+                      style="cursor: pointer"
+                      @click="showCForm = true"
+                    >
                       C-Form <i class="ri-arrow-right-s-line"></i>
                     </p>
                     <p class="mb-0 fw-semibold small" style="color: #17c400">
@@ -160,6 +173,8 @@
                     </p>
                   </div>
                 </div>
+
+                <CForm v-if="showCForm" @close="showCForm = false" />
 
                 <div class="p-3 d-flex">
                   <div class="">
@@ -204,13 +219,19 @@
                       <div class="d-flex gap-2">
                         <button
                           class="px-2 py-1 rounded bg-white fw-semibold"
-                          style="border: 2px solid var(--primary-red); color: var(--primary-red);"
+                          style="
+                            border: 2px solid var(--primary-red);
+                            color: var(--primary-red);
+                          "
                         >
                           Snap
                         </button>
                         <button
                           class="px-2 py-1 rounded bg-white fw-semibold"
-                          style="border: 2px solid var(--primary-red); color: var(--primary-red);"
+                          style="
+                            border: 2px solid var(--primary-red);
+                            color: var(--primary-red);
+                          "
                         >
                           Upload
                         </button>
@@ -252,6 +273,9 @@ import aadhar from "../../assets/aadhar.png";
 import scannerr from "../../assets/scannerr.png";
 import passport from "../../assets/passport.png";
 import uploadd from "../../assets/uploadd.png";
+import CForm from "./CForm.vue";
+
+const showCForm = ref(false);
 
 const guests = ref([
   {
