@@ -11,11 +11,10 @@ const showAadhar = ref(false);
 <template>
   <div class="overlay">
     <div class="custom-modal">
-      <!-- Header -->
       <div class="modal-header-custom d-flex justify-content-between p-0">
         <div class="d-flex">
           <div class="d-flex w-100">
-            <img :src="user" class="w-25 h-50 align-self-center mx-3" />
+            <img :src="user" class="userImg align-self-center mx-3" />
             <div class="glenn">
               <p class="fw-bold m-0">Glenn Maxwell</p>
               <p class="m-0 main">Main Guest</p>
@@ -48,7 +47,10 @@ const showAadhar = ref(false);
                   <img :src="deleteIcon" class="w-25" />
                   Delete
                 </button>
-                <button class="btn text-primary fw-bold" @click="showAadhar = true">
+                <button
+                  class="btn text-primary fw-bold"
+                  @click="showAadhar = true"
+                >
                   Reupload
                 </button>
                 <button class="btn text-primary fw-bold">Rescan</button>
@@ -77,7 +79,6 @@ const showAadhar = ref(false);
             </div>
           </div>
         </div>
-        <!-- RIGHT SIDE -->
         <div class="col-lg-6">
           <div
             class="right-container d-flex flex-column justify-content-between h-100"
@@ -264,7 +265,6 @@ const showAadhar = ref(false);
   display: flex;
   flex-direction: column;
 }
-/* HEADER */
 .modal-header-custom {
   padding: 15px 20px;
   border-bottom: 1px solid #ddd;
@@ -281,14 +281,16 @@ const showAadhar = ref(false);
   border-radius: 6px;
   font-size: 18px;
 }
-/* BODY */
 .modal-body-custom {
   flex: 1;
   overflow-y: auto;
 }
-/* LEFT */
 .left-container {
   padding: 20px;
+}
+.userImg {
+  width: 38px;
+  height: 38px;
 }
 .upload-box {
   height: 75vh;
@@ -298,7 +300,6 @@ const showAadhar = ref(false);
   justify-content: center;
   align-items: center;
 }
-/* FOOTER */
 .modal-footer-custom {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
   display: flex;
