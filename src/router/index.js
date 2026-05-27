@@ -9,7 +9,9 @@ import Dummy from "../components/proof/Dummy.vue";
 import DummyTwo from "../components/proof/DummyTwo.vue";
 import DummyThree from "../components/proof/DummyThree.vue";
 import Folios from "../components/proof/Folios.vue";
-
+import PaymentDetailsDummy from "../components/proof/PaymentDetailsDummy.vue";
+import PaymentsDummy from "../components/proof/PaymentsDummy.vue";
+import AdvanceDummy from "../components/proof/AdvanceDummy.vue";
 const routes = [
   {
     path: "/",
@@ -50,6 +52,16 @@ const routes = [
   {
     path: "/Folios",
     component: Folios,
+  },
+  {
+    path: "/paymentdetailsdummy",
+    component: PaymentDetailsDummy,
+  },{
+    path: "/paymentdummy",
+    component: PaymentsDummy,
+  },{
+    path: "/advancedummy",
+    component: AdvanceDummy,
   },
   
 ];

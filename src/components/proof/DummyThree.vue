@@ -49,17 +49,5 @@
 <script setup>
 import redpin from '../../assets/redpin.png'
 import { ref } from 'vue'
-const source = ref([{
-    name: "Arstistry Pub",
-    id: 2156546,
-    time: "23/20/24 12:17",
-    there: true,
-},
-{
-    name: "Le Cafe",
-    id: 2332444,
-    time: "23/20/24 19:18",
-    there: false,
-},
-])
+
 </script>
