@@ -9,7 +9,7 @@
             <p>Add New Promotion</p>
         </div>
     </div>
-    <div class="promotionscarousel">
+    <div class="promotionscarousel d-flex ">
         <div class="pcarousel-inner">
             <div class="pimg">
                 <img :src="recpages" alt="">
@@ -24,7 +24,7 @@
         <button class="pcoarousel-prev" type="button" >
 
         </button>
-        <button class="pcarousel-next">
+        <button class="pcarousel-next" type="button">
 
         </button>
     </div>
