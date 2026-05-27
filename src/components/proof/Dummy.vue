@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid py-3 ">
         <div class="col-4">
-            <div class="card shadow-sm border-0">
+            <div class="card rounded shadow-sm border-0">
                 <div class="card-header bg-white d-flex justify-content-between align-items-center">
                     <div>
                         <h6 class="mb-0 fw-bold">POS Check - 1221</h6>
