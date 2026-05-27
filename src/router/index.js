@@ -6,6 +6,7 @@ import DocumentApproval from "../components/documentApproval/DocumentApproval.vu
 import IDProof from "../components/proof/IDProof.vue";
 import MissingProofs from "../components/proof/MissingProofs.vue";
 import DefaultLayout from "../components/proof/DefaultLayout.vue";
+import Folios from "../components/proof/Folios.vue";
 
 const routes = [
   {
@@ -32,6 +33,11 @@ const routes = [
     path: "/defaultLayout",
     component: DefaultLayout,
   },
+  {
+    path: "/Folios",
+    component: Folios,
+  },
+  
 ];
 
 const router = createRouter({
