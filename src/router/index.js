@@ -8,6 +8,7 @@ import MissingProofs from "../components/proof/MissingProofs.vue";
 import DefaultLayout from "../components/proof/DefaultLayout.vue";
 import Dummy from "../components/proof/Dummy.vue";
 import DummyTwo from "../components/proof/DummyTwo.vue";
+import DummyThree from "../components/proof/DummyThree.vue";
 
 const routes = [
   {
@@ -41,6 +42,10 @@ const routes = [
   {
     path: "/dummytwo",
     component: DummyTwo,
+  },
+  {
+    path: "/dummythree",
+    component: DummyThree,
   },
 ];
 

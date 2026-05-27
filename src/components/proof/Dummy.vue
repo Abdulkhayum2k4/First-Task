@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid py-3 ">
+    <div class="container-fluid py-3 bodyy">
         <div class="col-4">
             <div class="card rounded shadow-sm border-0">
                 <div class="card-header bg-white d-flex justify-content-between align-items-center">
@@ -166,3 +166,13 @@ const signatures = [
     { label: "FnB Manager" },
 ]
 </script>
+
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+
+.bodyy{
+    font-size: 14px !important; 
+    font-family: "Poppins", sans-serif;
+}
+</style>
