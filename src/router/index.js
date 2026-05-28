@@ -11,7 +11,8 @@ import Folios from "../components/proof/Folios.vue";
 import PaymentDetailsDummy from "../components/proof/PaymentDetailsDummy.vue";
 import PaymentsDummy from "../components/proof/PaymentsDummy.vue";
 import AdvanceDummy from "../components/proof/AdvanceDummy.vue";
-import Promotions from "../components/proof/Promotions.vue"
+import Promotions from "../components/proof/Promotions.vue";
+import Anuna from "../components/proof/Anuna.vue";
 
 const routes = [
   {
@@ -53,17 +54,23 @@ const routes = [
   {
     path: "/paymentdetailsdummy",
     component: PaymentDetailsDummy,
-  },{
+  },
+  {
     path: "/paymentdummy",
     component: PaymentsDummy,
-  },{
+  },
+  {
     path: "/advancedummy",
     component: AdvanceDummy,
   },
   {
-    path:"/promotions",
-    component: Promotions
-  }  
+    path: "/promotions",
+    component: Promotions,
+  },
+  {
+    path: "/anuna",
+    component: Anuna,
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),
