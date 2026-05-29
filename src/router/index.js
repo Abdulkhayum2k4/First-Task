@@ -13,7 +13,8 @@ import PaymentsDummy from "../components/proof/PaymentsDummy.vue";
 import AdvanceDummy from "../components/proof/AdvanceDummy.vue";
 import Promotions from "../components/proof/Promotions.vue";
 import Anuna from "../components/proof/Anuna.vue";
-
+import Anunatwo from "@/components/proof/Anunatwo.vue";
+import Cnfregcard from "@/components/proof/Cnfregcard.vue";
 const routes = [
   {
     path: "/",
@@ -70,6 +71,14 @@ const routes = [
   {
     path: "/anuna",
     component: Anuna,
+  },
+   {
+    path: "/anunatwo",
+    component: Anunatwo,
+  },
+   {
+    path: "/cnfregcard",
+    component: Cnfregcard,
   },
 ];
 const router = createRouter({
