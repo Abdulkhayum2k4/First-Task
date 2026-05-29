@@ -1,39 +1,26 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
 import Practice from "../views/Practice.vue";
 import DocumentReservation from "../components/documents/DocumentReservation.vue";
 import DocumentApproval from "../components/documentApproval/DocumentApproval.vue";
-import IDProof from "../components/proof/IDProof.vue";
 import Dummy from "../components/proof/Dummy.vue";
 import DummyTwo from "../components/proof/DummyTwo.vue";
 import DummyThree from "../components/proof/DummyThree.vue";
-import Folios from "../components/proof/Folios.vue";
 import PaymentDetailsDummy from "../components/proof/PaymentDetailsDummy.vue";
 import PaymentsDummy from "../components/proof/PaymentsDummy.vue";
 import AdvanceDummy from "../components/proof/AdvanceDummy.vue";
 import Promotions from "../components/proof/Promotions.vue";
 import Anuna from "../components/proof/Anuna.vue";
+import verificationRoutes from "../verification/verificationRoutes.js";
+import Verification from "../verification/Verification.vue";
 
 const routes = [
   {
     path: "/",
-    component: Home,
-  },
-  {
-    path: "/practice",
-    component: Practice,
+    component: DocumentReservation,
   },
   {
     path: "/documentApproval",
     component: DocumentApproval,
-  },
-  {
-    path: "/documentReservation",
-    component: DocumentReservation,
-  },
-  {
-    path: "/idProof",
-    component: IDProof,
   },
   {
     path: "/dummy",
@@ -47,10 +34,7 @@ const routes = [
     path: "/dummythree",
     component: DummyThree,
   },
-  {
-    path: "/folios",
-    component: Folios,
-  },
+
   {
     path: "/paymentdetailsdummy",
     component: PaymentDetailsDummy,
@@ -71,6 +55,11 @@ const routes = [
     path: "/anuna",
     component: Anuna,
   },
+  {
+    path: "/verification",
+    component: Verification,
+  },
+  ...verificationRoutes,
 ];
 const router = createRouter({
   history: createWebHistory(),

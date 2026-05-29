@@ -134,9 +134,9 @@
       </div>
     </div>
   </div>
-  <div class="three_icons position-relative">
+  <!-- <div class="three_icons position-relative">
     <ThreeIcons class="dots position-absolute bottom-0 end-0 pe-3 pb-3" />
-  </div>
+  </div> -->
 </template>
 
 <script setup>
@@ -149,7 +149,7 @@ import wrong from "../../assets/wrong.png";
 import plane from "../../assets/plane.png";
 import AllDropdown from "../dropdowns/AllDropdown.vue";
 import SearchInput from "../dropdowns/searchInput.vue";
-import ThreeIcons from "../threeIcons/ThreeIcons.vue";
+// import ThreeIcons from "../proof/ThreeIcons.vue/index.js";
 
 const guests = ref([
   {
