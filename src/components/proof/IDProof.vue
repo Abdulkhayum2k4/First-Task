@@ -28,41 +28,9 @@
 <script setup>
 import ProofCards from "./ProofCards.vue";
 import ProofHeader from "./ProofHeader.vue";
-import ThreeIcons from "../threeIcons/ThreeIcons.vue";
+import ThreeIcons from "./ThreeIcons.vue/index.js";
 import Sidebar from "./Sidebar.vue";
 
-const menuItems = [
-  {
-    name: "ID Proof",
-    active: true,
-    alert: true,
-    completed: false,
-  },
-  {
-    name: "Reg Card",
-    completed: true,
-  },
-  {
-    name: "Folios",
-    completed: true,
-  },
-  {
-    name: "Invoices",
-    completed: true,
-  },
-  {
-    name: "POS Checks",
-    anywarning: true,
-  },
-  {
-    name: "Payments & c...",
-    completed: true,
-  },
-  {
-    name: "Other details",
-    completed: true,
-  },
-];
 </script>
 
 <style scoped>
