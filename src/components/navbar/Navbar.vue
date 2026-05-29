@@ -13,7 +13,7 @@
         </li>
 
         <li>
-          <a href="-check-ins" class="navlinks">Pre check ins</a>
+          <a href="" class="navlinks">Pre check ins</a>
         </li>
 
         <li>
