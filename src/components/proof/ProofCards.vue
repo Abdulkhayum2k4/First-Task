@@ -1,7 +1,7 @@
 <template>
   <header>
     <ul class="list-unstyled d-flex gap-4 mb-3 px-3 py-2 border-bottom">
-      <li class="fw-bold">ID Prood</li>
+      <li class="fw-bold">ID Proof</li>
       <li style="color: var(--primary-red)" class="fw-semibold">
         <img :src="redwarning" alt="" /> Missing Proofs
       </li>

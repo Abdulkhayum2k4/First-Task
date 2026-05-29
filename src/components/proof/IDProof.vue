@@ -2,35 +2,8 @@
   <ProofHeader />
   <div class="container-fluid">
     <div class="row sidebar vh-100">
-      <div class="col-2 p-0">
-        <div class="p-3">
-          <div
-            v-for="item in menuItems"
-            :key="item.name"
-            class="menu-item rounded py-2 fs-6"
-            :class="{ active: item.active }"
-          >
-            <div
-              class="d-flex justify-content-between align-items-center w-100"
-            >
-              <div class="d-flex align-items-center gap-2">
-                <span v-if="item.alert == true" class="ps-1 ms-1">{{
-                  item.name
-                }}</span>
-                <span v-else>{{ item.name }}</span>
-              </div>
-              <span v-if="item.alert" class="pe-3">
-                <img :src="warning" />
-              </span>
-              <span v-if="item.completed" class="text-dark pe-3">
-                <img :src="blacktick" />
-              </span>
-              <span v-if="item.anywarning" class="pe-3">
-                <img :src="blackwarning" />
-              </span>
-            </div>
-          </div>
-        </div>
+      <div class="col-2 p-3">
+        <Sidebar />
       </div>
 
       <div class="col-10 p-3">
@@ -50,18 +23,13 @@
       </button>
     </div>
   </div>
-
 </template>
 
 <script setup>
-import warning from "../../assets/redwarning.png";
-import blackwarning from "../../assets/blackwarning.png";
-import blacktick from "../../assets/blacktick.png";
 import ProofCards from "./ProofCards.vue";
 import ProofHeader from "./ProofHeader.vue";
 import ThreeIcons from "../threeIcons/ThreeIcons.vue";
-
-
+import Sidebar from "./Sidebar.vue";
 
 const menuItems = [
   {

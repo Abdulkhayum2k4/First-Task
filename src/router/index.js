@@ -4,12 +4,15 @@ import Practice from "../views/Practice.vue";
 import DocumentReservation from "../components/documents/DocumentReservation.vue";
 import DocumentApproval from "../components/documentApproval/DocumentApproval.vue";
 import IDProof from "../components/proof/IDProof.vue";
-import DefaultLayout from "../components/proof/DefaultLayout.vue";
 import Dummy from "../components/proof/Dummy.vue";
 import DummyTwo from "../components/proof/DummyTwo.vue";
 import DummyThree from "../components/proof/DummyThree.vue";
 import Folios from "../components/proof/Folios.vue";
-import Promotions from "../components/proof/Promotions.vue"
+import PaymentDetailsDummy from "../components/proof/PaymentDetailsDummy.vue";
+import PaymentsDummy from "../components/proof/PaymentsDummy.vue";
+import AdvanceDummy from "../components/proof/AdvanceDummy.vue";
+import Promotions from "../components/proof/Promotions.vue";
+import Anuna from "../components/proof/Anuna.vue";
 
 const routes = [
   {
@@ -33,10 +36,6 @@ const routes = [
     component: IDProof,
   },
   {
-    path: "/defaultLayout",
-    component: DefaultLayout,
-  },
-  {
     path: "/dummy",
     component: Dummy,
   },
@@ -49,19 +48,32 @@ const routes = [
     component: DummyThree,
   },
   {
-    path: "/Folios",
+    path: "/folios",
     component: Folios,
   },
   {
-    path:"/promotions",
-    component: Promotions
-  }
-  
+    path: "/paymentdetailsdummy",
+    component: PaymentDetailsDummy,
+  },
+  {
+    path: "/paymentdummy",
+    component: PaymentsDummy,
+  },
+  {
+    path: "/advancedummy",
+    component: AdvanceDummy,
+  },
+  {
+    path: "/promotions",
+    component: Promotions,
+  },
+  {
+    path: "/anuna",
+    component: Anuna,
+  },
 ];
-
 const router = createRouter({
   history: createWebHistory(),
   routes,
 });
-
 export default router;
