@@ -48,7 +48,7 @@ const routes = [
     component: DummyThree,
   },
   {
-    path: "/Folios",
+    path: "/folios",
     component: Folios,
   },
   {
