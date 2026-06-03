@@ -1,22 +1,22 @@
     <template>
-        <div class="container-fluid py-3 bod,yy">
-            <div class="col-3 vh-100">
-                <div class="card rounded shadow-sm border-0 ">
+        <div class="container-fluid py-0 bodyy">
+            <div>
+                <div class="card rounded shadow-sm border-0 "style="width: 400px;" >
                     <div class="card-header bg-white d-flex justify-content-between align-items-center">
                         <p class=" fw-bold">
                             2 Payments
                         </p>
                     </div>
 
-                    <div class="card-body  border p-2" style="">
-                        <div class=" rounded" style="border: 1px solid var(--primary-red);">
+                    <div class="card-body  border p-2" style="height: 500px;">
+                        <div class=" rounded" style="border: 1px solid var(--primary-red); height: 140px;">
 
 
                             <div class="d-flex justify-content-between align-items-center bg-secondary-subtle px-2 mt-1"
                                 style="height: 30px;">
 
                                 <div class="d-flex align-items-center gap-2">
-                                    <div style="background-color: var(--primary-red); height: 21px; width: 5px;"
+                                    <div style="background-color: var(--primary-red); height: 30px; width: 5px;"
                                         class="rounded">
                                     </div>
 
@@ -60,7 +60,7 @@
 
 
                             <div class="d-flex justify-content-between align-items-center bg-secondary-subtle px-2 mt-1"
-                                style="height: 30px;">
+                                style="height: 25px;">
 
                                 <div class="d-flex align-items-center gap-2">
                                     <div style="background-color: var(--primary-red); height: 21px; width: 5px;"
@@ -105,7 +105,7 @@
                                     <span class="ms-2 fw-semibold" style="color: #ED8C05;">Pre Auth</span>
                                 </div>
                             </div>
-                            <div class="" :style="{ backgroundImage: `url(${bglav})`,  backgroundSize: '480px'}">
+                            <div class="" :style="{ backgroundImage: `url(${bglav})`,  backgroundSize: '600px',}">
                                 <div class="d-flex justify-content-between p-2">
                                     <div class="">
                                         <p class="mb-0 pb-0 fw-semibold">₹ 25,92,099.20</p>

@@ -4,7 +4,7 @@ import ThreeIcons from "@/components/proof/ThreeIcons.vue";
 
 <template>
   <div class="whole_content row m-0">
-    <header class="col-2">
+    <header class="col-2 p-3">
       <div class="header_content py-3">
         <slot name="side_content"></slot>
       </div>

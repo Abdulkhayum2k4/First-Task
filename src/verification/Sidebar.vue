@@ -1,13 +1,13 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar gap-1">
     <router-link
       v-for="item in menuItems"
       :key="item.name"
       :to="item.path"
-      class="menu-item rounded py-2 fs-6 text-decoration-none d-block"
-      :class="{ active: item.active }"
+      class="menu-item  py-1 fs-6 text-decoration-none d-block "
+      active-class="active"
     >
-      <div class="d-flex justify-content-between align-items-center w-100">
+      <div class="d-flex justify-content-between align-items-center w-100 gap-1">
         <div class="d-flex align-items-center gap-2">
           <span v-if="item.alert == true" class="ps-1 ms-1">
             {{ item.name }}
@@ -83,13 +83,22 @@ const menuItems = [
 .menu-item {
   font-size: 18px;
   color: #222;
+  position: relative;
+  padding-left: 10px;
 }
 
-.menu-item.active {
+.menu-item.router-link-active,
+.menu-item.router-link-exact-active {
   background: #ffecec;
   color: #ff4d4f;
-  border-left: 4px solid #ff4d4f;
+  border-left: 4px  solid #ff4d4f;
+   
   font-weight: 600;
+  padding-left:5px;
+
+  
+  
+  
 }
 
 .menu-item:hover {

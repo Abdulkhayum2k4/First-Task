@@ -21,7 +21,8 @@
         </li>
 
         <li>
-          <a href="" class="navlinks">Promotions</a>
+          
+          <router-link to="/promotions" class="navlinks">Promotions</router-link>
         </li>
 
         <li>

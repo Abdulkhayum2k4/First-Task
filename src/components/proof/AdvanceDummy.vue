@@ -1,6 +1,6 @@
 <template>
-    <div class="container-fluid py-3 ">
-        <div class="col-4" style="width:">
+    <div class="container-fluid py-0 ">
+        <div  style="width:">
             <div class="card rounded shadow-sm border-0">
                 <div class="card-header bg-white d-flex justify-content-between align-items-center">
                     <div class="d-flex gap-2">
@@ -33,7 +33,7 @@
 
                 <div class="card-body" style="background-color: #fafafa;">
                     <div class=" p-1 pb-0 pt-0 d-flex justify-content-center ">
-                        <img :src="citybankinvoice" alt="">
+                        <img :src="citybankinvoice" alt=""  style="max-height: 64vh; object-fit: contain;">
                     </div>
                 </div>
                 

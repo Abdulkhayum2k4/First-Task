@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="col-4">
+    <div class="w-100">
       <div
         class="container-fluid d-flex justify-content-between border"
         style="box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5)"
@@ -15,16 +15,16 @@
             <span class="fs-3">+</span>
           </p>
         </div>
-        <div class="d-flex gap-2 mt-2">
-          <p><img :src="sharee" alt="" /></p>
-          <p><img :src="downloadd" alt="" /></p>
+        <div class="d-flex gap-3 mt-2">
+          <p><img :src="sharee" alt="" height="15px" width="20px" /></p>
+          <p><img :src="downloadd" alt="" height="25px" width="25px" /></p>
         </div>
       </div>
     </div>
 
     <div class="col-4 mt-1">
-      <div class="px-2 pb-2 bg-secondary-subtle">
-        <img :src="cnfregcardd" alt="" width="495" />
+      <div class="px-2 pb-2 ">
+        <img :src="cnfregcardd" alt="" width="600" height="550" />
       </div>
     </div>
   </div>

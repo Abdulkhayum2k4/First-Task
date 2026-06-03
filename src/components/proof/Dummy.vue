@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid py-3 bodyy">
-        <div class="col-4">
+        <div>
             <div class="card rounded shadow-sm border-0">
                 <div class="card-header bg-white d-flex justify-content-between align-items-center">
                     <div>
@@ -174,5 +174,8 @@ const signatures = [
 .bodyy{
     font-size: 14px !important; 
     font-family: "Poppins", sans-serif;
+    height:550px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 </style>

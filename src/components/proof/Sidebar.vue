@@ -1,10 +1,11 @@
 <template>
-  <div
-    v-for="item in menuItems"
-    :key="item.name"
-    class="menu-item rounded py-2 fs-6"
-    :class="{ active: item.active }"
-  >
+ <div
+  v-for="item in menuItems"
+  :key="item.name"
+  class="menu-item rounded py-2 fs-6"
+  :class="{ active: activeMenu === item.name }"
+  @click="activeMenu = item.name"
+>
     <div class="d-flex justify-content-between align-items-center w-100">
       <div class="d-flex align-items-center gap-2">
         <span v-if="item.alert == true" class="ps-1 ms-1">{{ item.name }}</span>
@@ -27,11 +28,14 @@
 import warning from "../../assets/redwarning.png";
 import blackwarning from "../../assets/blackwarning.png";
 import blacktick from "../../assets/blacktick.png";
+import { ref } from "vue";
+
+const activeMenu = ref("ID Proof ");
 
 const menuItems = [
   {
     name: "ID Proof",
-    active: true,
+    
     alert: true,
     completed: false,
     path: "/idProof",
@@ -77,14 +81,20 @@ const menuItems = [
 .menu-item {
   font-size: 18px;
   color: #222;
+  cursor: pointer;
+  padding-left: 10px;
+  transition: all 0.2s ease;
 }
+
 .menu-item.active {
-  background: #ffecec;
-  color: #ff4d4f;
-  border-left: 4px solid #ff4d4f;
+  background: black;
+  color: black;
+  border-left: 4px solid olive;
   font-weight: 600;
+  border-radius: 6px;
 }
-.menu-item:hover {
-  background: #f0f0f0;
+
+.menu-item:hover:not(.active) {
+  background: #f5f5f5;
 }
 </style>
