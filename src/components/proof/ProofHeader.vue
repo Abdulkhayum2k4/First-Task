@@ -7,23 +7,117 @@ import Ellipse_654 from "../../assets/Ellipse_654.png";
 import Ellipse_655 from "../../assets/Ellipse_655.png";
 import Ellipse_656 from "../../assets/Ellipse_656.png";
 import { ref } from "vue";
+
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+
 const collapsed = ref(false);
 </script>
 
 <template>
-  <div class="d-flex justify-content-between px-4 py-2 whole">
+  
+    <div class="d-flex justify-content-between px-4 py-2  whole">
     <div class="d-flex align-items-center gap-4">
       <i
         class="ri-arrow-left-line pe-3 fs-1"
         @click="$router.push('/')"
         style="cursor: pointer"
       ></i>
-      <div class="d-flex">
+      <div class="d-flex align-items-center gap-4">
         <div>
           <p class="conf" v-if="!collapsed">Conf. : 21546123546</p>
           <h2 class="p-0 m-0">Glen Maxwell</h2>
           <p v-if="!collapsed">Mobile : 87XXXXXXXX92</p>
           <p class="conf" v-if="collapsed">Conf. : 21546123546</p>
+          
+        </div>
+        <div>
+          <div v-if="collapsed && route.path === '/regCard'"  >
+            <div class="d-flex align-items-center gap-3">
+              <div
+                class="px-3 py-1 rounded-pill d-flex align-items-center fw-semibold "
+                style="
+                  background-color: #cfeecb;
+                  color: #25b700;
+                  font-size: 12px;
+                  font-weight: 400;
+                "
+              >
+                <i class="ri-circle-fill me-1" style="font-size: 7px"></i>
+                Checked-in
+              </div>
+
+              <div style="color: #25b700; font-size: 15px; font-weight:600;">
+                <i class="ri-check-line"></i>
+                DM Verified
+              </div>
+            </div>
+          </div>
+          <div v-if="collapsed && route.path === '/posChecks'">
+            <div class="d-flex align-items-center gap-3">
+              <div
+                class="px-3 py-1 rounded-pill d-flex align-items-center fw-semibold "
+                style="
+                  background-color: #cfeecb;
+                  color: #25b700;
+                  font-size: 12px;
+                  font-weight: 400;
+                "
+              >
+                <i class="ri-circle-fill me-1" style="font-size: 7px"></i>
+                Checked-in
+              </div>
+              </div>
+          </div>
+          <div v-if="collapsed && route.path === '/folios'">
+            <div class="d-flex align-items-center gap-3">
+              <div
+                class="px-3 py-1 rounded-pill d-flex align-items-center fw-semibold "
+                style="
+                  background-color: #cfeecb;
+                  color: #25b700;
+                  font-size: 12px;
+                  font-weight: 400;
+                "
+              >
+                <i class="ri-circle-fill me-1" style="font-size: 7px"></i>
+                Checked-in
+              </div>
+
+              <div style="color: #25b700; font-size: 15px; font-weight:600;">
+                <i class="ri-check-line"></i>
+                DM Verified
+              </div>
+            </div>
+          </div>
+          <div v-if="collapsed && route.path === '/invoices'">
+            <h4>invoices</h4>
+          </div>
+          <div v-if="collapsed && route.path === '/payments'">
+            <div class="d-flex align-items-center gap-3">
+              <div
+                class="px-3 py-1 rounded-pill d-flex align-items-center fw-semibold "
+                style="
+                  background-color: #cfeecb;
+                  color: #25b700;
+                  font-size: 12px;
+                  font-weight: 400;
+                "
+              >
+                <i class="ri-circle-fill me-1" style="font-size: 7px"></i>
+                Checked-in
+              </div>
+
+              <div style="color: #25b700; font-size: 15px; font-weight:600;">
+                <i class="ri-check-line"></i>
+                DM Verified
+              </div>
+            </div>
+          </div>
+          <div v-if="collapsed && route.path === '/other'">
+            <h4>other</h4>
+          </div>
         </div>
 
         <div
@@ -97,15 +191,15 @@ const collapsed = ref(false);
           <p>+14 guests</p>
         </div>
       </div>
-     
     </div>
-     <button
-        class="btn btn-outline-dark align-self-center gap-5 fw-semibold"
-        @click="collapsed = !collapsed"
-      >
-        {{ collapsed ? "View guest details" : "Collapse" }}
-      </button>
+    <button
+      class="btn btn-outline-dark align-self-center gap-5 fw-semibold"
+      @click="collapsed = !collapsed"
+    >
+      {{ collapsed ? "View guest details" : "Collapse" }}
+    </button>
   </div>
+  
 </template>
 
 <style scoped>

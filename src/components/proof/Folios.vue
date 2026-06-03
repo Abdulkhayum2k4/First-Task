@@ -33,14 +33,11 @@
           <td><All /></td>
         </tr>
         <tr v-for="(document, index) in Folios" :key="index">
-          <td>
-            <span>{{ document.Folio }}</span>
-          </td>
+          <td><span>{{ document.Folio }}</span></td>
           <td>
             <router-link to="/anuna" class="windows">
               <span>{{ document.Windows }}</span>
             </router-link>
-            
           </td>
           <td>
             <span>{{ document.Guestname }}</span>
@@ -48,51 +45,37 @@
               <img :src="plane" alt="" />
             </span>
           </td>
+          <td><span>{{ document.Company }}</span></td>
+          <td><span>{{ document.Stayperiod }}</span></td>
+          <td><span>{{ document.Room }}</span></td>
+          <td><span>{{ document.Guests }}</span></td>
+          <td><span>{{ document.GSTN }}</span></td>
+          <td><span>{{ document.Membership }}</span></td>
+          <td><span>{{ document.Rate }}</span></td>
           <td>
-            <span>{{ document.Company }}</span>
+            <span v-if="document.Signature == 'Signed'" style="color: #17c400">Signed</span>
+            <span v-else style="color: #fe5358">Not Signed</span>
           </td>
           <td>
-            <span>{{ document.Stayperiod }}</span>
-          </td>
-          <td>
-            <span>{{ document.Room }}</span>
-          </td>
-          <td>
-            <span>{{ document.Guests }}</span>
-          </td>
-          <td>
-            <span>{{ document.GSTN }}</span>
-          </td>
-          <td>
-            <span>{{ document.Membership }}</span>
-          </td>
-          <td>
-            <span>{{ document.Rate }}</span>
-          </td>
-          <td>
-            <span v-if="document.Signature == 'Signed'" style="color: #17c400"
-              >Signed</span
-            >
-            <span
-              v-else="document.Signature == 'Not Signed'"
-              style="color: #fe5358"
-              >Not Signed</span
-            >
-          </td>
-          <td>
-            <span v-if="document.Payment == 'Paid'" style="color: #17c400"
-              >Paid</span
-            >
-            <span v-else="document.Payment == 'Not Paid'" style="color: #fe5358"
-              >Not Paid</span
-            >
+            <span v-if="document.Payment == 'Paid'" style="color: #17c400">Paid</span>
+            <span v-else style="color: #fe5358">Not Paid</span>
           </td>
         </tr>
       </tbody>
     </table>
-    <div class="sidebar-wrapper">
-    <Sidebar />
-  </div>
+
+    <!-- Action Button -->
+    <button v-if="!isSidebarOpen" class="action-btn btn btn-danger" @click="toggleSidebar">
+      Actions <span><i class="ri-arrow-up-wide-line"></i></span>
+    </button>
+
+    <!-- Sidebar with close button -->
+    <div v-if="isSidebarOpen" class="sidebar-wrapper">
+      <button class="close-btn btn btn-danger" @click="toggleSidebar">
+        <i class="ri-arrow-right-wide-line"></i>
+      </button>
+      <Sidebar />
+    </div>
   </div>
 </template>
 
@@ -103,6 +86,13 @@ import SearchInput from "../dropdowns/searchInput.vue";
 import DatePicker from "../dropdowns/DatePicker.vue";
 import plane from "../../assets/plane.png";
 import Sidebar from "../dropdowns/Sidebar.vue";
+
+const isSidebarOpen = ref(false);
+
+const toggleSidebar = () => {
+  isSidebarOpen.value = !isSidebarOpen.value;
+};
+
 const Folios = ref([
   {
     Folio: "Folio1",
@@ -119,7 +109,6 @@ const Folios = ref([
     Signature: "Signed",
     Payment: "Paid",
   },
-
   {
     Folio: "Folio2",
     Windows: "Windows 2",
@@ -135,7 +124,6 @@ const Folios = ref([
     Signature: "Signed",
     Payment: "Paid",
   },
-
   {
     Folio: "Folio3",
     Windows: "Windows 3",
@@ -159,11 +147,32 @@ const Folios = ref([
   position: relative;
 }
 
+.action-btn {
+  position: fixed;
+  right: -38px;
+  top: 75%;
+  transform: translateY(-50%) rotate(-90deg);
+  z-index: 100;
+  white-space: nowrap;
+}
+
 .sidebar-wrapper {
-  position: absolute;
+  position: fixed;
   right: 0;
-  top: 100%;
-  margin-top: 50px;
+  top: 75%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.close-btn {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  height: 80px;
+  width: 36px;
+  padding: 4px;
+  border-radius: 6px 0 0 6px;
 }
 
 .bgclr {
@@ -177,7 +186,8 @@ const Folios = ref([
 thead.bg-secondary th {
   background-color: #e8e8e8 !important;
 }
-.windows{
+
+.windows {
   color: black;
   text-decoration: none;
 }
