@@ -12,7 +12,7 @@
         </div>
         <div class="col-6">
           <RegCardForm />
-        </div>
+        </div> 
       </div>
     </template>
   </Layout>
