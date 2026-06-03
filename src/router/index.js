@@ -56,6 +56,10 @@ const routes = [
     component: Anuna,
   },
   {
+    path: "/practice",
+    component: Practice,
+  },
+  {
     path: "/verification",
     component: Verification,
   },
