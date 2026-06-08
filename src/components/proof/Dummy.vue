@@ -194,7 +194,7 @@ const signatures = [
 .bodyy {
   font-size: 14px !important;
   font-family: "Poppins", sans-serif;
-  height: 550px;
+  /* height: 550px; */
   overflow-y: auto;
   overflow-x: hidden;
 }
