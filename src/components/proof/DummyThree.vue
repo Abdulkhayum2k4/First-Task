@@ -51,7 +51,4 @@
 
 <script setup>
 import redpin from "../../assets/redpin.png";
-
 </script>
-
-
