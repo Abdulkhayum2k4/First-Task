@@ -1,23 +1,21 @@
 <template>
   <div class="reg-card">
-    <!-- Header -->
     <div
       class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom"
     >
       <h6 class="m-0 fw-bold">Reg Card - CNF 13134553</h6>
 
       <div class="d-flex align-items-center gap-2">
-        <span class="missing fw-semibold" style="font-size: 8px">
-          <i class="ri-error-warning-line "></i> 5 details missing
+        <span class="missing fw-semibold" style="font-size: 13px">
+          <i class="ri-error-warning-line"></i> 5 details missing
         </span>
         <span class="verified fw-semibold" style="font-size: 13px">
-          <i class="ri-check-line "></i> Verified
+          <i class="ri-check-line"></i> Verified
         </span>
       </div>
     </div>
 
-    <!-- Signature Row -->
-    <div class="d-flex gap-4 px-3 py-2 border-bottom" style="font-size: 13px">
+    <div class="d-flex gap-4 px-3 py-2" style="font-size: 13px">
       <span class="fw-semibold">
         Guest
         <span class="verified ms-1"
@@ -38,8 +36,21 @@
       </span>
     </div>
 
+    <div class="border-bottom d-flex justify-content-between px-3">
+      <div>
+        <span>Guest</span><span class="me-5"><i class="ri-thumb-up-line"></i> Signed</span>
+      </div>
+      <div>
+        <span>Front Desk</span
+        ><span><i class="ri-thumb-down-line"></i> Not Signed</span>
+      </div>
+      <div>
+        <span>Duty Manager</span
+        ><span><i class="ri-thumb-down-line"></i> Not Signed</span>
+      </div>
+    </div>
+
     <div class="card-body-scroll">
-      <!-- Guest Details -->
       <div class="section-block">
         <div class="d-flex justify-content-between align-items-center mb-2">
           <span class="section-title">Guest Details</span>
@@ -95,7 +106,6 @@
         </div>
       </div>
 
-      <!-- Stay Details -->
       <div class="section-block">
         <span class="section-title d-block mb-2">Stay Details</span>
         <div class="row g-2">
@@ -150,7 +160,6 @@
         </div>
       </div>
 
-      <!-- Payment Details -->
       <div class="section-block">
         <span class="section-title d-block mb-2">Payment Details</span>
         <div class="row g-2">
@@ -189,7 +198,6 @@
         </div>
       </div>
 
-      <!-- OTA Details -->
       <div class="section-block">
         <span class="section-title d-block mb-2">OTA Details</span>
         <div class="row g-2">
@@ -219,7 +227,6 @@
         </div>
       </div>
 
-      <!-- Membership Details -->
       <div class="section-block">
         <span class="section-title d-block mb-2">Membership Details</span>
         <div class="row g-2">
@@ -266,12 +273,11 @@
   color: var(--primary-green);
 }
 
-.signed{
+.signed {
   color: var(--primary-red);
 }
 
 .reg-card {
-  width: 638px;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -279,7 +285,6 @@
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
-  max-height: 600px
 }
 
 .card-body-scroll {

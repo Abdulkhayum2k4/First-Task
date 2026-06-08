@@ -19,7 +19,6 @@ const collapsed = ref(false);
   <div
     class="d-flex justify-content-between align-items-center px-4 py-2 whole"
   >
-    <!-- LEFT SECTION -->
     <div class="d-flex align-items-center gap-3">
       <i
         class="ri-arrow-left-line fs-4"
@@ -52,12 +51,10 @@ const collapsed = ref(false);
       </div>
     </div>
 
-    <!-- CENTER SECTION -->
     <div
       v-if="!collapsed"
       class="d-flex align-items-center gap-5 flex-grow-1 justify-content-center"
     >
-      <!-- Check In -->
       <div class="d-flex align-items-center gap-2">
         <img :src="praying" class="icons p-2 rounded" />
         <div>
@@ -66,7 +63,6 @@ const collapsed = ref(false);
         </div>
       </div>
 
-      <!-- Room -->
       <div class="d-flex align-items-center gap-2">
         <img :src="room" class="icons p-2 rounded" />
         <div>
@@ -75,7 +71,6 @@ const collapsed = ref(false);
         </div>
       </div>
 
-      <!-- CRS -->
       <div class="d-flex align-items-center gap-2">
         <img :src="crs" class="icons p-2 rounded" />
         <div>
@@ -84,7 +79,6 @@ const collapsed = ref(false);
         </div>
       </div>
 
-      <!-- Stay -->
       <div class="d-flex align-items-center gap-2">
         <img :src="stay" class="icons p-2 rounded" />
         <div>
@@ -94,31 +88,28 @@ const collapsed = ref(false);
       </div>
     </div>
 
-    <!-- RIGHT SECTION -->
     <div class="d-flex align-items-center gap-4">
-      <!-- Guest Count -->
       <div v-if="!collapsed" class="text-center">
         <div class="d-flex">
           <div class="position-relative">
             <img :src="Ellipse_654" class="kla k" />
-            <p class="alk position-absolute start-50 translate-middle-x">A</p>
+            <p class="alk position-absolute translate-middle-x">A</p>
           </div>
 
           <div class="position-relative">
             <img :src="Ellipse_655" class="kla l" />
-            <p class="alk position-absolute start-50 translate-middle-x">L</p>
+            <p class="alk position-absolute translate-middle-x">L</p>
           </div>
 
           <div class="position-relative">
             <img :src="Ellipse_656" class="kla a" />
-            <p class="alk position-absolute start-50 translate-middle-x">K</p>
+            <p class="alk position-absolute translate-middle-x">K</p>
           </div>
         </div>
 
         <small>+14 guests</small>
       </div>
 
-      <!-- COLLAPSED ROUTE LOGIC -->
       <template v-if="collapsed">
         <div v-if="route.path === '/regCard'">
           <div class="d-flex align-items-center gap-3">
@@ -190,7 +181,6 @@ const collapsed = ref(false);
         </div>
       </template>
 
-      <!-- BUTTON -->
       <button
         class="btn btn-outline-dark fw-semibold"
         @click="collapsed = !collapsed"
@@ -214,21 +204,18 @@ p {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Conf Number */
 .conf {
   color: var(--primary-green);
   font-size: 12px;
   font-weight: 600;
 }
 
-/* Guest Name */
 .guest-name {
   font-size: 28px;
   font-weight: 600;
   line-height: 1;
 }
 
-/* Pending Badge */
 .pending {
   background-color: #f4edc9;
   color: #b7a30f;
@@ -237,13 +224,11 @@ p {
   white-space: nowrap;
 }
 
-/* Mobile + Mail */
 .contact-info {
   font-size: 12px;
   color: #555;
 }
 
-/* Middle Section */
 .info-item {
   display: flex;
   align-items: center;
@@ -260,7 +245,6 @@ p {
   font-weight: 600;
 }
 
-/* Icons */
 .icons {
   width: 32px;
   height: 32px;
@@ -270,7 +254,6 @@ p {
   object-fit: contain;
 }
 
-/* Guest Avatars */
 .kla {
   width: 30px;
   height: 30px;
@@ -291,26 +274,24 @@ p {
 }
 
 .alk {
-  bottom: 10%;
+  bottom: 20%;
+  left: 40%;
   font-size: 12px;
   color: white;
   font-weight: 600;
 }
 
-/* Guest Count */
 .guest-count {
   font-size: 12px;
   color: #555;
   text-align: center;
 }
 
-/* Status Dot */
 .ri-circle-fill {
   font-size: 8px;
   align-self: center;
 }
 
-/* Collapse Button */
 .collapse-btn {
   min-width: 100px;
   font-size: 13px;
@@ -318,7 +299,6 @@ p {
   border-radius: 6px;
 }
 
-/* Checked In Badge */
 .checked-in {
   background-color: #cfeecb;
   color: #25b700;
@@ -326,7 +306,6 @@ p {
   font-weight: 500;
 }
 
-/* Header Sections */
 .header-left {
   min-width: 330px;
 }
