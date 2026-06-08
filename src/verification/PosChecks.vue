@@ -7,10 +7,10 @@
 
     <template #content>
       <div class="row">
-        <div class="col-2">
+        <div class="col-3">
           <DummyThree />
         </div>
-        <div class="col-5">
+        <div class="col-4">
           <DummyTwo />
         </div>
         <div class="col-5">

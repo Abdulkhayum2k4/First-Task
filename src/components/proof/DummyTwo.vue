@@ -1,8 +1,8 @@
 <template>
     <div class="container-fluid py-3 ">
-        <div class="col-4" style="width:">
+        <div >
             <div class="card rounded shadow-sm border-0">
-                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center gap-1">
                     <div class="d-flex gap-2">
                         <p>
 
@@ -12,7 +12,7 @@
                             firstcheck.pdf
                         </p>
                     </div>
-                    <div class="d-flex gap-1">
+                    <div class="d-flex ">
                         <p class="fw-semibold"><i class="ri-arrow-left-s-line"></i></p>
                         <p class="fw-semibold text-white bg-secondary px-2 rounded">1</p>
                         <p class="fw-semibold">of 3</p>
@@ -34,7 +34,8 @@
                     </div>
                 </div>
 
-                <div class="card-body" style="background-color: #fafafa;">
+                <div class="pdf-scroll">
+                    <div class="card-body" style="background-color: #fafafa;">
                     <div class=" p-1 pb-0 pt-0 d-flex justify-content-center ">
                         <img :src="invoice" alt="">
                     </div>
@@ -43,6 +44,7 @@
                     <div class=" p-1 pt-0 d-flex justify-content-center ">
                         <img :src="invoice" alt="">
                     </div>
+                </div>
                 </div>
                 
             </div>
@@ -58,3 +60,10 @@ import download from '../../assets/downloadd.png'
 import fullscreen from '../../assets/fullscreen.png'
 import invoice from '../../assets/invoicee.png'
 </script>
+<style>
+.pdf-scroll {
+  height: 550px; 
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+</style>

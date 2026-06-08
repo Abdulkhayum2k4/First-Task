@@ -1,42 +1,32 @@
 <template>
-  <div class="sidebar d-flex flex-column align-items-center gap-5 py-5">
-    <button class="btn border-0">
-      Push to <br />
-      tab
-    </button>
-
-    <button class="btn border-0">Scan ID</button>
-
-    <button class="btn border-0">
-      Make <br />
-      payment
-    </button>
-
-    <button class="btn border-0">
-      Add <br />
-      Sign
-    </button>
+  <div class="sidebar">
+    <div class="content">
+      <p>Push to <br />tab</p>
+      <p>Scan ID</p>
+      <p>Make payment</p>
+      <p>Add <br />Sign</p>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .sidebar {
-  width: 100px;
-  height: 100%;
-  background-color: #e8e8e8;
-  box-shadow: black;
-
-  clip-path: polygon(
-     0 0,
-    100% 12%,
-    100% 88%,
-    0 88%
-  );
+  width: 77px;
+  height: 300px;
+  background-color: #d9d9d9;
+  transform: skewY(25deg);
+  padding: 1px 0px;
 }
 
-.btn {
-  background: transparent;
-  box-shadow: none;
-  font-size: 16px;
+.content {
+  transform: skewY(-25deg);
+  text-align: center;
+}
+
+p {
+  margin: 35px auto;
+  color: black;
+  line-height: 1.1;
+  font-size: 15px;
 }
 </style>
