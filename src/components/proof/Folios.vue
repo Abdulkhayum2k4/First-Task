@@ -33,11 +33,13 @@
           <td><All /></td>
         </tr>
         <tr v-for="(document, index) in Folios" :key="index">
-          <td><span>{{ document.Folio }}</span></td>
           <td>
             <router-link to="/anuna" class="windows">
-              <span>{{ document.Windows }}</span>
+              <span>{{ document.Folio }}</span>
             </router-link>
+          </td>
+          <td>
+            <span>{{ document.Windows }}</span>
           </td>
           <td>
             <span>{{ document.Guestname }}</span>
@@ -45,19 +47,37 @@
               <img :src="plane" alt="" />
             </span>
           </td>
-          <td><span>{{ document.Company }}</span></td>
-          <td><span>{{ document.Stayperiod }}</span></td>
-          <td><span>{{ document.Room }}</span></td>
-          <td><span>{{ document.Guests }}</span></td>
-          <td><span>{{ document.GSTN }}</span></td>
-          <td><span>{{ document.Membership }}</span></td>
-          <td><span>{{ document.Rate }}</span></td>
           <td>
-            <span v-if="document.Signature == 'Signed'" style="color: #17c400">Signed</span>
+            <span>{{ document.Company }}</span>
+          </td>
+          <td>
+            <span>{{ document.Stayperiod }}</span>
+          </td>
+          <td>
+            <span>{{ document.Room }}</span>
+          </td>
+          <td>
+            <span>{{ document.Guests }}</span>
+          </td>
+          <td>
+            <span>{{ document.GSTN }}</span>
+          </td>
+          <td>
+            <span>{{ document.Membership }}</span>
+          </td>
+          <td>
+            <span>{{ document.Rate }}</span>
+          </td>
+          <td>
+            <span v-if="document.Signature == 'Signed'" style="color: #17c400"
+              >Signed</span
+            >
             <span v-else style="color: #fe5358">Not Signed</span>
           </td>
           <td>
-            <span v-if="document.Payment == 'Paid'" style="color: #17c400">Paid</span>
+            <span v-if="document.Payment == 'Paid'" style="color: #17c400"
+              >Paid</span
+            >
             <span v-else style="color: #fe5358">Not Paid</span>
           </td>
         </tr>
@@ -65,7 +85,11 @@
     </table>
 
     <!-- Action Button -->
-    <button v-if="!isSidebarOpen" class="action-btn btn btn-danger" @click="toggleSidebar">
+    <button
+      v-if="!isSidebarOpen"
+      class="action-btn btn btn-danger"
+      @click="toggleSidebar"
+    >
       Actions <span><i class="ri-arrow-up-wide-line"></i></span>
     </button>
 
