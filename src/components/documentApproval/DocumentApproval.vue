@@ -151,9 +151,9 @@
 
 </div>
 </div>
-<div class="three_icons position-relative">
+<!-- <div class="three_icons position-relative">
   <ThreeIcons class="dots position-absolute bottom-0 end-0 pe-3 pb-3" />
-</div>
+</div> -->
 </template>
 
 <script setup>
@@ -168,7 +168,7 @@ import plane from "../../assets/plane.png";
 import warning from "../../assets/warning.png";
 import trueee from "../../assets/trueee.png";
 import nooo from "../../assets/nooo.png";
-import ThreeIcons from "../threeIcons/ThreeIcons.vue";
+// import ThreeIcons from "../proof/ThreeIcons.vue/index.js";
 
 const documents = ref([
   {

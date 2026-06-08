@@ -34,30 +34,37 @@ const menuItems = [
     active: true,
     alert: true,
     completed: false,
+    path: "/idProof",
   },
   {
     name: "Reg Card",
     completed: true,
+    path: "/regCardForm",
   },
   {
     name: "Folios",
     completed: true,
+    path: "/folios",
   },
   {
     name: "Invoices",
     completed: true,
+    path: "/invoices",
   },
   {
     name: "POS Checks",
     anywarning: true,
+    path: "/posChecks",
   },
   {
     name: "Payments & c...",
     completed: true,
+    path: "/payments",
   },
   {
     name: "Other details",
     completed: true,
+    path: "other",
   },
 ];
 </script>
