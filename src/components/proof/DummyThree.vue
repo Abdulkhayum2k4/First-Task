@@ -21,7 +21,7 @@
               </div>
             </div>
           </div>
-          <div class="">
+          <div>
             <em>
               <p class="fw-medium">23/20/24 12:17</p>
             </em>

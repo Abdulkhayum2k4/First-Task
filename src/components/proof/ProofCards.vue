@@ -80,12 +80,8 @@
                     <p @click="openComponent('DrivingLicense', guest)">
                       Driving License
                     </p>
-                    <p @click="openComponent('VoterID', guest)">
-                      Voter ID
-                    </p>
-                    <p @click="openComponent('Passport', guest)">
-                      Passport
-                    </p>
+                    <p @click="openComponent('VoterID', guest)">Voter ID</p>
+                    <p @click="openComponent('Passport', guest)">Passport</p>
                   </div>
                 </div>
               </div>
@@ -105,9 +101,7 @@
               </div>
             </div>
 
-            <div
-              class="d-flex justify-content-between align-items-center pt-3"
-            >
+            <div class="d-flex justify-content-between align-items-center pt-3">
               <h6 class="mb-0 fw-bold">Face Image</h6>
 
               <div class="d-flex gap-2">

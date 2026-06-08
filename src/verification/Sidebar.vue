@@ -11,7 +11,7 @@
         class="d-flex justify-content-between align-items-center w-100 gap-1"
       >
         <div class="d-flex align-items-center gap-2">
-          <span v-if="item.alert == true" class="ps-1 ms-1">
+          <span v-if="item.alert == true">
             {{ item.name }}
           </span>
           <span v-else>
@@ -74,7 +74,7 @@ const menuItems = [
   },
   {
     name: "Other details",
-    completed: true,
+    completed: false,
     path: "/other",
   },
 ];
