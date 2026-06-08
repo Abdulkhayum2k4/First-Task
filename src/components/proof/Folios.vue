@@ -33,11 +33,13 @@
           <td><All /></td>
         </tr>
         <tr v-for="(document, index) in Folios" :key="index">
-          <td><span>{{ document.Folio }}</span></td>
           <td>
             <router-link to="/anuna" class="windows">
-              <span>{{ document.Windows }}</span>
+              <span>{{ document.Folio }}</span>
             </router-link>
+          </td>
+          <td>
+            <span>{{ document.Windows }}</span>
           </td>
           <td>
             <span>{{ document.Guestname }}</span>
@@ -57,7 +59,33 @@
             <span v-else style="color: #fe5358">Not Signed</span>
           </td>
           <td>
-            <span v-if="document.Payment == 'Paid'" style="color: #17c400">Paid</span>
+            <span>{{ document.Stayperiod }}</span>
+          </td>
+          <td>
+            <span>{{ document.Room }}</span>
+          </td>
+          <td>
+            <span>{{ document.Guests }}</span>
+          </td>
+          <td>
+            <span>{{ document.GSTN }}</span>
+          </td>
+          <td>
+            <span>{{ document.Membership }}</span>
+          </td>
+          <td>
+            <span>{{ document.Rate }}</span>
+          </td>
+          <td>
+            <span v-if="document.Signature == 'Signed'" style="color: #17c400"
+              >Signed</span
+            >
+            <span v-else style="color: #fe5358">Not Signed</span>
+          </td>
+          <td>
+            <span v-if="document.Payment == 'Paid'" style="color: #17c400"
+              >Paid</span
+            >
             <span v-else style="color: #fe5358">Not Paid</span>
           </td>
         </tr>
@@ -65,7 +93,11 @@
     </table>
 
     <!-- Action Button -->
-    <button v-if="!isSidebarOpen" class="action-btn btn btn-danger" @click="toggleSidebar">
+    <button
+      v-if="!isSidebarOpen"
+      class="action-btn btn btn-danger"
+      @click="toggleSidebar"
+    >
       Actions <span><i class="ri-arrow-up-wide-line"></i></span>
     </button>
 
@@ -150,7 +182,7 @@ const Folios = ref([
 .action-btn {
   position: fixed;
   right: -38px;
-  top: 60%;
+  top: 75%;
   transform: translateY(-50%) rotate(-90deg);
   z-index: 100;
   white-space: nowrap;
@@ -159,7 +191,7 @@ const Folios = ref([
 .sidebar-wrapper {
   position: fixed;
   right: 0;
-  top: 60%;
+  top: 75%;
   transform: translateY(-50%);
   display: flex;
   align-items: center;

@@ -95,6 +95,7 @@ const menuItems = [
   border-left: 4px solid #ff4d4f;
   font-weight: 600;
   padding-left: 5px;
+  font-size: 18px;
 }
 
 .menu-item.router-link-active .ri-check-line,

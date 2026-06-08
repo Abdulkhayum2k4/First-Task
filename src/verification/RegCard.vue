@@ -3,6 +3,7 @@
   <Layout>
     <template #side_content>
       <Sidebar />
+      
     </template>
 
     <template #content>
