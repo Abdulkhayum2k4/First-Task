@@ -16,15 +16,11 @@ import Verification from "../verification/Verification.vue";
 const routes = [
   {
     path: "/",
-    component: DocumentApproval,
+    component: DocumentReservation,
   },
   {
     path: "/documentApproval",
     component: DocumentApproval,
-  },
-  {
-    path: "/documentReservation",
-    component: DocumentReservation,
   },
   {
     path: "/dummy",
@@ -62,6 +58,10 @@ const routes = [
   {
     path: "/verification",
     component: Verification,
+  },
+  {
+    path:"/practice",
+    component: Practice
   },
   ...verificationRoutes,
 ];

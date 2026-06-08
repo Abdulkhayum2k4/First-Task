@@ -1,5 +1,4 @@
 <template>
-  
   <table class="table table-bordered table-striped p-3">
     <thead class="bg-secondary">
       <tr style="font-size: 13px" class="bg-secondary">
@@ -33,7 +32,6 @@
         <td><All /></td>
       </tr>
       <tr v-for="(document, index) in Folios" :key="index">
-
         <td>
           <span>{{ document.Folio }}</span>
         </td>
@@ -88,7 +86,7 @@
       </tr>
     </tbody>
   </table>
-  <Sidebar/>
+  <Sidebar />
 </template>
 
 <script setup>
@@ -158,6 +156,5 @@ const Folios = ref([
 }
 thead.bg-secondary th {
   background-color: #e8e8e8 !important;
-  
 }
 </style>

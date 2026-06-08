@@ -33,7 +33,7 @@ const verificationRoutes = [
         component: PosChecks,
       },
       {
-        path: "/payment",
+        path: "/payments",
         component: Payments,
       },
       {
