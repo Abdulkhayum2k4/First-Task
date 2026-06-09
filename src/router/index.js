@@ -63,6 +63,10 @@ const routes = [
     path: "/verification",
     component: Verification,
   },
+  {
+    path:"/practice",
+    component: Practice
+  },
   ...verificationRoutes,
 ];
 const router = createRouter({

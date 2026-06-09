@@ -6,14 +6,14 @@
     </template>
 
     <template #content>
-      <div class="row">
-        <div class="col-2">
+      <div class="content_grid">
+        <div class="col_small">
           <DummyThree />
         </div>
-        <div class="col-5">
+        <div class="col_medium">
           <DummyTwo />
         </div>
-        <div class="col-5">
+        <div class="col_large">
           <Dummy />
         </div>
       </div>
@@ -29,3 +29,26 @@ import DummyThree from "@/components/proof/DummyThree.vue";
 import DummyTwo from "@/components/proof/DummyTwo.vue";
 import Dummy from "@/components/proof/Dummy.vue";
 </script>
+
+<style scoped>
+.content_grid {
+  display: flex;
+  /* gap: 1rem; */
+  width: 100%;
+}
+
+.col_small {
+  flex: 2;
+  /* min-width: 0; */
+}
+
+.col_medium {
+  flex: 5;
+  /* min-width: 0; */
+}
+
+.col_large {
+  flex: 5;
+  /* min-width: 0; */
+}
+</style>

@@ -1,11 +1,10 @@
 <template>
   <div class="reg-card">
-    <!-- Header -->
     <div
-      class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom"
+      class="d-flex justify-content-between align-items-center px-3 py-3 border-bottom"
     >
       <h6 class="m-0 fw-bold">Reg Card - CNF 13134553</h6>
-      <div class="d-flex align-items-center gap-3">
+      <div class="d-flex align-items-center gap-2">
         <span class="missing fw-semibold" style="font-size: 13px">
           <i class="ri-error-warning-line"></i> 5 details missing
         </span>
@@ -15,73 +14,47 @@
       </div>
     </div>
 
-    <!-- Signature Row -->
-    <div class="d-flex gap-4 px-3 py-2 border-bottom" style="font-size: 13px">
-      <span class="fw-semibold">
-        Guest
-        <span class="verified ms-1"
+    <div
+      class="border-bottom d-flex justify-content-between px-3 py-3"
+      style="background-color: #f3f3f3"
+    >
+      <div>
+        <span class="me-2">Guest</span
+        ><span class="me-5 verified"
           ><i class="ri-thumb-up-line"></i> Signed</span
         >
-      </span>
-      <span class="fw-semibold">
-        Front Desk
-        <span class="signed ms-1"
+      </div>
+      <div>
+        <span class="me-2">Front Desk</span
+        ><span class="signed"
           ><i class="ri-thumb-down-line"></i> Not Signed</span
         >
-      </span>
-      <span class="fw-semibold">
-        Duty Manager
-        <span class="signed ms-1"
+      </div>
+      <div>
+        <span class="me-2">Duty Manager</span
+        ><span class="signed"
           ><i class="ri-thumb-down-line"></i> Not Signed</span
         >
-      </span>
+      </div>
     </div>
 
     <div class="card-body-scroll">
-      <!-- Guest Details -->
       <div class="section-block">
-        <div class="d-flex justify-content-between align-items-center mb-2">
+        <div class="d-flex justify-content-between align-items-center my-2">
           <span class="section-title">Guest Details</span>
-          <span style="font-size: 12px; color: #555">Adult 1, Child 0</span>
+          <span style="font-size: 13px" class="fw-bold">Adult 1, Child 0</span>
         </div>
-        <div class="row g-2">
-          <div class="col-6">
-            <div class="info-box">
+        <div class="guest_grid">
+          <!-- Left column -->
+          <div class="guest_left">
+            <div class="info-box mb-2">
               <span class="info-label">Name</span>
               <input type="text" class="info-input" placeholder="Enter name" />
             </div>
-          </div>
-          <div class="col-6">
-            <div class="info-box">
-              <span class="info-label">Address</span>
-              <input
-                type="text"
-                class="info-input"
-                placeholder="Enter address"
-              />
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="info-box">
+            <div class="info-box mb-2">
               <span class="info-label">Phone</span>
               <input type="text" class="info-input" placeholder="Enter phone" />
             </div>
-          </div>
-          <div class="col-6">
-            <div
-              class="info-box d-flex justify-content-between align-items-start"
-            >
-              <div class="w-100">
-                <span class="info-label">Passport</span>
-                <input
-                  type="text"
-                  class="info-input"
-                  placeholder="Enter passport number"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
             <div class="info-box">
               <span class="info-label">Email</span>
               <input
@@ -91,10 +64,27 @@
               />
             </div>
           </div>
+
+          <div class="guest_right">
+            <div class="info-box mb-2">
+              <span class="info-label">Address</span>
+              <textarea
+                class="info-input"
+                placeholder="Enter address"
+                rows="4"
+              />
+            </div>
+            <div class="info-box">
+              <span class="info-label">Passport</span>
+              <input
+                type="text"
+                class="info-input"
+                placeholder="Enter passport number"
+              />
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Stay Details -->
       <div class="section-block">
         <span class="section-title d-block mb-2">Stay Details</span>
         <div class="row g-2">
@@ -130,26 +120,9 @@
               />
             </div>
           </div>
-          <div class="col-6">
-            <div class="info-box">
-              <span class="info-label">Room Type</span>
-              <input
-                type="text"
-                class="info-input"
-                placeholder="Enter room type"
-              />
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="info-box">
-              <span class="info-label">Nights</span>
-              <input type="number" class="info-input" placeholder="0" />
-            </div>
-          </div>
         </div>
       </div>
 
-      <!-- Payment Details -->
       <div class="section-block">
         <span class="section-title d-block mb-2">Payment Details</span>
         <div class="row g-2">
@@ -157,38 +130,21 @@
             <div class="info-box">
               <div class="d-flex justify-content-between">
                 <span class="info-label">Card Type</span>
-                <span class="info-label">Expiry</span>
+                <span class="info-label">XX/XX</span>
               </div>
               <div class="d-flex justify-content-between">
                 <input
-                  type="text"
+                  type="number"
                   class="info-input"
-                  placeholder="Card type"
-                  style="width: 48%"
-                />
-                <input
-                  type="text"
-                  class="info-input"
-                  placeholder="MM/YY"
+                  placeholder="XXXXXXXXXXX 0000"
                   style="width: 48%"
                 />
               </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="info-box">
-              <span class="info-label">Card Number</span>
-              <input
-                type="text"
-                class="info-input"
-                placeholder="XXXXXXXXXXX 0000"
-              />
             </div>
           </div>
         </div>
       </div>
 
-      <!-- OTA Details -->
       <div class="section-block">
         <span class="section-title d-block mb-2">OTA Details</span>
         <div class="row g-2">
@@ -198,27 +154,18 @@
               <input
                 type="text"
                 class="info-input"
-                placeholder="Enter OTA name"
-              />
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="info-box">
-              <span class="info-label">Booking ID</span>
-              <input
-                type="text"
-                class="info-input"
                 placeholder="Enter booking ID"
               />
             </div>
           </div>
-          <div class="col-12 d-flex justify-content-end">
-            <button class="btn btn-danger px-4">Actions</button>
+          <div class="col-6 d-flex justify-content-end">
+            <button class="btn btn-danger px-4 align-self-center">
+              Actions
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Membership Details -->
       <div class="section-block">
         <span class="section-title d-block mb-2">Membership Details</span>
         <div class="row g-2">
@@ -254,8 +201,6 @@
   </div>
 </template>
 
-<script setup></script>
-
 <style scoped>
 .missing {
   color: var(--primary-orange);
@@ -265,24 +210,16 @@
   color: var(--primary-green);
 }
 
-.signed{
+.signed {
   color: var(--primary-red);
 }
 
 .reg-card {
-  width: 560px;
   background: #fff;
-  border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
-}
-
-.card-body-scroll {
-  overflow-y: auto;
-  flex: 1;
 }
 
 .section-block {
@@ -291,9 +228,9 @@
 }
 
 .section-title {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
-  color: #555;
+  color: #a1a1a1;
 }
 
 .info-box {
@@ -301,14 +238,13 @@
   border-radius: 6px;
   padding: 4px 10px;
   background: #fff;
-  height: 100%;
+  background: #fafafa;
 }
 
 .info-label {
   display: block;
   font-size: 11px;
   font-weight: 600;
-  color: #777;
   margin-bottom: 4px;
 }
 
@@ -319,12 +255,36 @@
   font-size: 13px;
   font-weight: 500;
   color: #222;
-  background: transparent;
   padding: 0;
+  background: #fafafa;
 }
 
 .info-input::placeholder {
   color: #bbb;
   font-weight: 400;
+}
+
+.guest_grid {
+  display: flex;
+  gap: 8px;
+}
+
+.guest_left {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.guest_right {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea.info-input {
+  resize: none;
+  font-family: inherit;
 }
 </style>

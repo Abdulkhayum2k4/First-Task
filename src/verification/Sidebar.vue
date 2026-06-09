@@ -1,15 +1,17 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar gap-1">
     <router-link
       v-for="item in menuItems"
       :key="item.name"
       :to="item.path"
-      class="menu-item rounded py-2 fs-6 text-decoration-none d-block"
-      :class="{ active: item.active }"
+      class="menu-item py-1 fs-6 text-decoration-none d-block"
+      active-class="active"
     >
-      <div class="d-flex justify-content-between align-items-center w-100">
+      <div
+        class="d-flex justify-content-between align-items-center w-100 gap-1"
+      >
         <div class="d-flex align-items-center gap-2">
-          <span v-if="item.alert == true" class="ps-1 ms-1">
+          <span v-if="item.alert == true">
             {{ item.name }}
           </span>
           <span v-else>
@@ -21,8 +23,8 @@
           <img :src="warning" alt="warning" />
         </span>
 
-        <span v-if="item.completed" class="text-dark">
-          <img :src="blacktick" alt="completed" />
+        <span v-if="item.completed">
+          <i class="ri-check-line"></i>
         </span>
 
         <span v-if="item.anywarning">
@@ -36,7 +38,6 @@
 <script setup>
 import warning from "../assets/redwarning.png";
 import blackwarning from "../assets/blackwarning.png";
-import blacktick from "../assets/blacktick.png";
 
 const menuItems = [
   {
@@ -73,7 +74,7 @@ const menuItems = [
   },
   {
     name: "Other details",
-    completed: true,
+    completed: false,
     path: "/other",
   },
 ];
@@ -83,13 +84,23 @@ const menuItems = [
 .menu-item {
   font-size: 18px;
   color: #222;
+  position: relative;
+  padding-left: 10px;
 }
 
-.menu-item.active {
+.menu-item.router-link-active,
+.menu-item.router-link-exact-active {
   background: #ffecec;
   color: #ff4d4f;
   border-left: 4px solid #ff4d4f;
   font-weight: 600;
+  padding-left: 5px;
+  font-size: 18px;
+}
+
+.menu-item.router-link-active .ri-check-line,
+.menu-item.router-link-exact-active .ri-check-line {
+  color: #ff4d4f;
 }
 
 .menu-item:hover {

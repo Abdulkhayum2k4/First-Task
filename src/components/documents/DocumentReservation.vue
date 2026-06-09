@@ -66,8 +66,10 @@
               <tr v-for="(guest, index) in guests" :key="index">
                 <td>{{ index + 1 }}</td>
                 <td></td>
-                <td class="fw-semibold">
-                  {{ guest.confirmation }}
+                <td >
+                  <router-link to="/IDProof" class="normal-text">
+                    {{ guest.confirmation }}
+                  </router-link>
                 </td>
                 <td>{{ guest.crs }}</td>
                 <td>
@@ -86,6 +88,13 @@
                 </td>
                 <td>
                   <span>
+                    <span v-if="guest.identification=='Passport' ">
+                      <img :src="warning" alt="">
+                    </span>
+                    <span v-if="guest.identification=='Aadhar' ">
+                      <img :src="trueee" alt="">
+                    </span>
+
                     {{ guest.identification }}
                   </span>
                 </td>
@@ -139,8 +148,12 @@
   </div> -->
 </template>
 
+
 <script setup>
+
 import { ref } from "vue";
+import warning from "../../assets/redwarning.png";
+import trueee from "../../assets/trueee.png";
 import Navbar from "../navbar/Navbar.vue";
 import DatePicker from "../dropdowns/DatePicker.vue";
 import DocumentProps from "../DocumentProps.vue";
@@ -153,6 +166,7 @@ import SearchInput from "../dropdowns/searchInput.vue";
 
 const guests = ref([
   {
+    
     confirmation: "8494797002",
     crs: "....F121896876",
     name: "Christian",
@@ -167,9 +181,10 @@ const guests = ref([
     chargeSlip: 3,
     invoices: 3,
     verified: true,
-    time: "21/02 17:12",
+    time: "21/02 11:12",
   },
   {
+    
     confirmation: "8494797002",
     crs: "....F121896876",
     name: "Ronaldo",
@@ -184,10 +199,11 @@ const guests = ref([
     chargeSlip: 3,
     invoices: 3,
     verified: true,
-    time: "21/02 17:12",
+    time: "21/02 11:12",
   },
   {
-    confirmation: "8494797002",
+   
+    confirmation: "41576135424",
     crs: "....F121896876",
     name: "Messi",
     period: "21/02/25",
@@ -201,7 +217,25 @@ const guests = ref([
     chargeSlip: 3,
     invoices: 3,
     verified: false,
-    time: "21/02 17:12",
+    time: "21/02 11:12",
+  },
+  {
+    
+    confirmation: "41576135424",
+    crs: "....F121896876",
+    name: "Ahmed",
+    period: "21/02/25",
+    room: 475,
+    guests: 2,
+    reservation: "Checked out",
+    identification: "1/2 Approved",
+    cform: true,
+    regCard: false,
+    infoFolio: 3,
+    chargeSlip: 3,
+    invoices: 3,
+    verified: false,
+    time: "21/02 11:12",
   },
 ]);
 </script>
@@ -213,5 +247,9 @@ const guests = ref([
 
 .lesswidth {
   width: 100px;
+}
+.normal-text {
+  text-decoration: none;
+  color: inherit; 
 }
 </style>

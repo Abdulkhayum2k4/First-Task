@@ -21,7 +21,8 @@
         </li>
 
         <li>
-          <a href="" class="navlinks">Promotions</a>
+          
+          <router-link to="/promotions" class="navlinks">Promotions</router-link>
         </li>
 
         <li>
@@ -57,7 +58,6 @@ import logo from "../../assets/logo.png";
   height: 46px;
   font-size: 15px;
 }
-
 .res {
   margin-bottom: -8px;
   border-bottom: 4px solid #fe5358;

@@ -1,7 +1,7 @@
     <template>
-        <div class="container-fluid py-3 bod,yy">
-            <div class="col-3 vh-100">
-                <div class="card rounded shadow-sm border-0 ">
+        <div class="container-fluid py-0 bodyy" ">
+            <div>
+                <div class="card rounded shadow-sm border-0 " style=" max-width: 400px; height: 540px;"  >
                     <div class="card-header bg-white d-flex justify-content-between align-items-center">
                         <p class=" fw-bold">
                             Payment details - Advance 1
@@ -11,7 +11,7 @@
                     <div class="card-body  border px-2 py-1" style="">
                         <div class="d-flex gap-3 p-2">
                             <p>
-                                <img :src="pd1" alt="">
+                                <img :src="pd1" alt="" class="icon-img">
                             </p>
                             <div class="d-flex gap-2">
                                 <p class="fw-semibold">
@@ -22,7 +22,7 @@
                         </div>
                         <div class="d-flex gap-3 px-2 py-1">
                             <p>
-                                <img :src="pd2" alt="">
+                                <img :src="pd2" alt="" class="icon-img">
                             </p>
                             <div class="d-flex gap-2">
                                 <p class="fw-semibold">
@@ -35,7 +35,7 @@
                         </div>
                          <div class="d-flex gap-3 px-2 py-1">
                             <p>
-                                <img :src="pd3" alt="">
+                                <img :src="pd3" alt="" class="icon-img">
                             </p>
                             <div class="d-flex gap-2">
                                 <p class="fw-semibold">
@@ -48,7 +48,7 @@
                         </div>
                          <div class="d-flex gap-3 px-2 py-1">
                             <p>
-                                <img :src="pd4" alt="">
+                                <img :src="pd4" alt="" class="icon-img">
                             </p>
                             <div class="d-flex gap-2">
                                 <p class="fw-semibold">
@@ -61,7 +61,7 @@
                         </div>
                          <div class="d-flex gap-3 px-2 py-1">
                             <p>
-                                <img :src="pd5" alt="">
+                                <img :src="pd5" alt="" class="icon-img">
                             </p>
                             <div class="d-flex gap-2">
                                 <p class="fw-semibold">
@@ -74,7 +74,7 @@
                         </div>
                          <div class="d-flex gap-3 px-2 py-1">
                             <p>
-                                <img :src="pd6" alt="">
+                                <img :src="pd6" alt="" class="icon-img">
                             </p>
                             <div class="d-flex gap-2">
                                 <p class="fw-semibold">
@@ -87,7 +87,7 @@
                         </div>
                          <div class="d-flex gap-3 px-2 py-1">
                             <p>
-                                <img :src="pd7" alt="">
+                                <img :src="pd7" alt="" class="icon-img">
                             </p>
                             <div class="d-flex gap-2">
                                 <p class="fw-semibold">
@@ -100,7 +100,7 @@
                         </div>
                          <div class="d-flex gap-3 px-2 py-1">
                             <p>
-                                <img :src="pd6" alt="">
+                                <img :src="pd6" alt="" class="icon-img">
                             </p>
                             <div class="d-flex gap-2">
                                 <p class="fw-semibold">
@@ -113,7 +113,7 @@
                         </div>
                          <div class="d-flex gap-3 px-2 py-1">
                             <p>
-                                <img :src="pd6" alt="">
+                                <img :src="pd6" alt="" class="icon-img">
                             </p>
                             <div class="d-flex gap-2">
                                 <p class="fw-semibold">
@@ -156,5 +156,16 @@ import greendone from '../../assets/greendone.png'
 
 .bodyy {
     font-family: "Inter", sans-serif;
+    
+}
+.icon-img {
+  max-width: 20px;
+  max-height: 20px;
+  width: 100%;
+  height: auto;
+}
+.done-icon {
+  max-width: 16px;
+  max-height: 16px;
 }
 </style>

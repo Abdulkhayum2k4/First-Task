@@ -241,7 +241,7 @@ const showAadhar = ref(false);
 }
 
 .check {
-  appearance: none;
+  
   width: 15px;
   height: 15px;
   border: 1px solid red;
