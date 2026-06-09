@@ -23,7 +23,7 @@
 
   <div class="col-4">
     <div class="px-2 pb-2">
-      <img :src="cnfregcardd" alt="" width="700" />
+      <img :src="cnfregcardd" alt="" width="700" height="780" />
     </div>
   </div>
 </template>
