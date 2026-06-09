@@ -15,38 +15,27 @@
       </div>
     </div>
 
-    <div class="d-flex gap-4 px-3 py-2" style="font-size: 13px">
-      <span class="fw-semibold">
-        Guest
-        <span class="verified ms-1"
+    <div
+      class="border-bottom d-flex justify-content-between px-3 py-2"
+      style="background-color: #f3f3f3"
+    >
+      <div>
+        <span class="me-2">Guest</span
+        ><span class="me-5 verified"
           ><i class="ri-thumb-up-line"></i> Signed</span
         >
-      </span>
-      <span class="fw-semibold">
-        Front Desk
-        <span class="signed ms-1"
-          ><i class="ri-thumb-down-line"></i> Not Signed</span
-        >
-      </span>
-      <span class="fw-semibold">
-        Duty Manager
-        <span class="signed ms-1"
-          ><i class="ri-thumb-down-line"></i> Not Signed</span
-        >
-      </span>
-    </div>
-
-    <div class="border-bottom d-flex justify-content-between px-3">
-      <div>
-        <span>Guest</span><span class="me-5"><i class="ri-thumb-up-line"></i> Signed</span>
       </div>
       <div>
-        <span>Front Desk</span
-        ><span><i class="ri-thumb-down-line"></i> Not Signed</span>
+        <span class="me-2">Front Desk</span
+        ><span class="signed"
+          ><i class="ri-thumb-down-line"></i> Not Signed</span
+        >
       </div>
       <div>
-        <span>Duty Manager</span
-        ><span><i class="ri-thumb-down-line"></i> Not Signed</span>
+        <span class="me-2">Duty Manager</span
+        ><span class="signed"
+          ><i class="ri-thumb-down-line"></i> Not Signed</span
+        >
       </div>
     </div>
 
@@ -54,7 +43,7 @@
       <div class="section-block">
         <div class="d-flex justify-content-between align-items-center mb-2">
           <span class="section-title">Guest Details</span>
-          <span style="font-size: 12px; color: #555">Adult 1, Child 0</span>
+          <span style="font-size: 13px" class="fw-bold">Adult 1, Child 0</span>
         </div>
         <div class="row g-2">
           <div class="col-6">
@@ -66,10 +55,11 @@
           <div class="col-6">
             <div class="info-box">
               <span class="info-label">Address</span>
-              <input
+              <textarea
                 type="text"
                 class="info-input"
                 placeholder="Enter address"
+                rows="5"
               />
             </div>
           </div>
@@ -298,9 +288,9 @@
 }
 
 .section-title {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
-  color: #555;
+  color: #a1a1a1;
 }
 
 .info-box {
@@ -315,7 +305,6 @@
   display: block;
   font-size: 11px;
   font-weight: 600;
-  color: #777;
   margin-bottom: 4px;
 }
 
