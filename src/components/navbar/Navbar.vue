@@ -58,7 +58,6 @@ import logo from "../../assets/logo.png";
   height: 46px;
   font-size: 15px;
 }
-
 .res {
   margin-bottom: -8px;
   border-bottom: 4px solid #fe5358;

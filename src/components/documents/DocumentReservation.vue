@@ -88,6 +88,13 @@
                 </td>
                 <td>
                   <span>
+                    <span v-if="guest.identification=='Passport' ">
+                      <img :src="warning" alt="">
+                    </span>
+                    <span v-if="guest.identification=='Aadhar' ">
+                      <img :src="trueee" alt="">
+                    </span>
+
                     {{ guest.identification }}
                   </span>
                 </td>
@@ -141,8 +148,12 @@
   </div> -->
 </template>
 
+
 <script setup>
+
 import { ref } from "vue";
+import warning from "../../assets/redwarning.png";
+import trueee from "../../assets/trueee.png";
 import Navbar from "../navbar/Navbar.vue";
 import DatePicker from "../dropdowns/DatePicker.vue";
 import DocumentProps from "../DocumentProps.vue";

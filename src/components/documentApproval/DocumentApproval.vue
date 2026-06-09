@@ -3,9 +3,7 @@
     <Navbar />
     <div class="">
       <DocumentProps name="Document Approval" />
-
       <Approval />
-
       <div class="table-responsive container-fluid">
         <table class="table table-bordered table-striped p-3">
           <thead class="bg-secondary">
@@ -149,9 +147,6 @@
       </div>
     </div>
   </div>
-  <!-- <div class="three_icons position-relative">
-  <ThreeIcons class="dots position-absolute bottom-0 end-0 pe-3 pb-3" />
-</div> -->
 </template>
 
 <script setup>
@@ -167,7 +162,6 @@ import warning from "../../assets/warning.png";
 import trueee from "../../assets/trueee.png";
 import nooo from "../../assets/nooo.png";
 // import ThreeIcons from "../proof/ThreeIcons.vue/index.js";
-
 const documents = ref([
   {
     documentType: "Reg Card",

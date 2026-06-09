@@ -56,12 +56,16 @@
           <td><span>{{ document.Rate }}</span></td>
           <td>
             <span v-if="document.Signature == 'Signed'" style="color: #17c400">Signed</span>
-            <span v-else style="color: #fe5358">Not Signed</span>
+            <span v-else style="color: #fe5358" class="fw-semibold">
+              <i>
+                Not Signed
+              </i>
+            </span>
           </td>
-          <td>
+          <!-- <td>
             <span>{{ document.Stayperiod }}</span>
-          </td>
-          <td>
+          </td> -->
+          <!-- <td>
             <span>{{ document.Room }}</span>
           </td>
           <td>
@@ -72,8 +76,8 @@
           </td>
           <td>
             <span>{{ document.Membership }}</span>
-          </td>
-          <td>
+          </td> -->
+          <!-- <td>
             <span>{{ document.Rate }}</span>
           </td>
           <td>
@@ -81,12 +85,10 @@
               >Signed</span
             >
             <span v-else style="color: #fe5358">Not Signed</span>
-          </td>
+          </td> -->
           <td>
-            <span v-if="document.Payment == 'Paid'" style="color: #17c400"
-              >Paid</span
-            >
-            <span v-else style="color: #fe5358">Not Paid</span>
+            <span v-if="document.Payment == 'Paid'" style="color: #17c400"> <img :src="correct" alt=""> Paid</span>
+            <span v-else style="color: #fe5358" class="fw-semibold"> <img :src="wrong" alt=""> <i>Not Paid</i></span>
           </td>
         </tr>
       </tbody>
@@ -118,6 +120,9 @@ import SearchInput from "../dropdowns/searchInput.vue";
 import DatePicker from "../dropdowns/DatePicker.vue";
 import plane from "../../assets/plane.png";
 import Sidebar from "../dropdowns/Sidebar.vue";
+import correct from "../../assets/correct.png";
+import wrong from "../../assets/wrong.png";
+
 
 const isSidebarOpen = ref(false);
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="fcontent">
+  <div class="">
     <div class="fheader d-flex align-items-center">
       <div class="right-fheader d-flex align-items-center gap-3">
         <img src="../../assets/fwrong.png" alt="" width="25" height="25" />
@@ -26,7 +26,7 @@
       <div class="gdetails-left">
         <p class="fw-bold">Info Folio 1</p>
         <div class="left-gimg">
-          <img src="../../assets/infonovotel.png" alt="" />
+          <img :src="info" alt="" />
         </div>
       </div>
       <div class="gdetails-right d-flex flex-column">
@@ -141,6 +141,7 @@
 import { ref } from "vue";
 import SearchInput from "../dropdowns/searchInput.vue";
 import DatePicker from "../dropdowns/DatePicker.vue";
+import info  from '../../assets/infonovotel.png'
 
 const Items = ref([
   {
