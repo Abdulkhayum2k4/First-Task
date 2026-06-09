@@ -1,71 +1,96 @@
 <template>
-  <div class="table-container">
-    <table class="table table-bordered table-striped p-3">
-      <thead class="bg-secondary">
-        <tr style="font-size: 13px" class="bg-secondary">
-          <th><span>Folio</span></th>
-          <th><span>Windows</span></th>
-          <th><span>Guest name</span></th>
-          <th><span>Company</span></th>
-          <th><span>Stay period</span></th>
-          <th><span>Room</span></th>
-          <th><span>Guests</span></th>
-          <th><span>GSTN</span></th>
-          <th><span>Membership</span></th>
-          <th><span>Rate()</span></th>
-          <th><span>Signature</span></th>
-          <th><span>Payment</span></th>
-        </tr>
-      </thead>
-      <tbody style="font-size: 13px; font-weight: 500">
-        <tr>
-          <td></td>
-          <td><All /></td>
-          <td><SearchInput /></td>
-          <td><SearchInput /></td>
-          <td><DatePicker /></td>
-          <td><SearchInput /></td>
-          <td><All /></td>
-          <td><All /></td>
-          <td></td>
-          <td><All /></td>
-          <td><All /></td>
-          <td><All /></td>
-        </tr>
-        <tr v-for="(document, index) in Folios" :key="index">
-          <td>
-            <router-link to="/anuna" class="windows">
-              <span>{{ document.Folio }}</span>
-            </router-link>
-          </td>
-          <td>
-            <span>{{ document.Windows }}</span>
-          </td>
-          <td>
-            <span>{{ document.Guestname }}</span>
-            <span v-if="document.flightname == true">
-              <img :src="plane" alt="" />
-            </span>
-          </td>
-          <td><span>{{ document.Company }}</span></td>
-          <td><span>{{ document.Stayperiod }}</span></td>
-          <td><span>{{ document.Room }}</span></td>
-          <td><span>{{ document.Guests }}</span></td>
-          <td><span>{{ document.GSTN }}</span></td>
-          <td><span>{{ document.Membership }}</span></td>
-          <td><span>{{ document.Rate }}</span></td>
-          <td>
-            <span v-if="document.Signature == 'Signed'" style="color: #17c400">Signed</span>
-            <span v-else style="color: #fe5358" class="fw-semibold">
-              <i>
-                Not Signed
-              </i>
-            </span>
-          </td>
-          <!-- <td>
+  <div class="bg-white px-2 pb-5 pt-2 rounded">
+    <div class=" d-flex gap-4 border-bottom pb-2">
+      <p class="fw-semibold">3 Folios in total</p>
+      <p style="color: #FF9933;"> <img :src="orange" alt=""> Partly Paid</p>
+    </div>
+    <div class="table-container border rounded-3 mt-3">
+      <table class="table table-bordered table-striped p-3 rounded-3">
+        <thead class="bg-secondary">
+          <tr style="font-size: 13px" class="bg-secondary">
+            <th><span>Folio</span></th>
+            <th><span>Windows</span></th>
+            <th><span>Guest name</span></th>
+            <th><span>Company</span></th>
+            <th><span>Stay period</span></th>
+            <th><span>Room</span></th>
+            <th><span>Guests</span></th>
+            <th><span>GSTN</span></th>
+            <th><span>Membership</span></th>
+            <th><span>Rate()</span></th>
+            <th><span>Signature</span></th>
+            <th><span>Payment</span></th>
+          </tr>
+        </thead>
+        <tbody style="font-size: 13px; font-weight: 500">
+          <tr>
+            <td></td>
+            <td>
+              <All />
+            </td>
+            <td>
+              <SearchInput />
+            </td>
+            <td>
+              <SearchInput />
+            </td>
+            <td>
+              <DatePicker />
+            </td>
+            <td>
+              <SearchInput />
+            </td>
+            <td>
+              <All />
+            </td>
+            <td>
+              <All />
+            </td>
+            <td></td>
+            <td>
+              <All />
+            </td>
+            <td>
+              <All />
+            </td>
+            <td>
+              <All />
+            </td>
+          </tr>
+          <tr v-for="(document, index) in Folios" :key="index">
+            <td>
+              <router-link to="/anuna" class="windows">
+                <span>{{ document.Folio }}</span>
+              </router-link>
+            </td>
+            <td>
+              <span>{{ document.Windows }}</span>
+            </td>
+            <td>
+              <span>{{ document.Guestname }}</span>
+              <span v-if="document.flightname == true">
+                <img :src="plane" alt="" />
+              </span>
+            </td>
+            <td><span>{{ document.Company }}</span></td>
+            <td><span>{{ document.Stayperiod }}</span></td>
+            <td><span>{{ document.Room }}</span></td>
+            <td><span>{{ document.Guests }}</span></td>
+            <td><span>{{ document.GSTN }}</span></td>
+            <td><span>{{ document.Membership }}</span></td>
+            <td><span>{{ document.Rate }}</span></td>
+            <td>
+              <span v-if="document.Signature == 'Signed'" style="color: #17c400">Signed</span>
+              <span v-else style="color: #fe5358" class="fw-semibold">
+                <i>
+                  Not Signed
+                </i>
+              </span>
+            </td>
+            <!-- <td>
             <span>{{ document.Stayperiod }}</span>
           </td> -->
-          <!-- <td>
+            <!-- <td>
             <span>{{ document.Room }}</span>
           </td>
           <td>
@@ -77,38 +102,35 @@
           <td>
             <span>{{ document.Membership }}</span>
           </td> -->
-          <!-- <td>
+            <!-- <td>
             <span>{{ document.Rate }}</span>
           </td>
           <td>
             <span v-if="document.Signature == 'Signed'" style="color: #17c400"
-              >Signed</span
+            >Signed</span
             >
             <span v-else style="color: #fe5358">Not Signed</span>
           </td> -->
-          <td>
-            <span v-if="document.Payment == 'Paid'" style="color: #17c400"> <img :src="correct" alt=""> Paid</span>
-            <span v-else style="color: #fe5358" class="fw-semibold"> <img :src="wrong" alt=""> <i>Not Paid</i></span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            <td>
+              <span v-if="document.Payment == 'Paid'" style="color: #17c400"> <img :src="correct" alt=""> Paid</span>
+              <span v-else style="color: #fe5358" class="fw-semibold"> <img :src="wrong" alt=""> <i>Not Paid</i></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-    <!-- Action Button -->
-    <button
-      v-if="!isSidebarOpen"
-      class="action-btn btn btn-danger"
-      @click="toggleSidebar"
-    >
-      Actions <span><i class="ri-arrow-up-wide-line"></i></span>
-    </button>
-
-    <!-- Sidebar with close button -->
-    <div v-if="isSidebarOpen" class="sidebar-wrapper">
-      <button class="close-btn btn btn-danger" @click="toggleSidebar">
-        <i class="ri-arrow-right-wide-line"></i>
+      <!-- Action Button -->
+      <button v-if="!isSidebarOpen" class="action-btn btn btn-danger" @click="toggleSidebar">
+        Actions <span><i class="ri-arrow-up-wide-line"></i></span>
       </button>
-      <Sidebar />
+
+      <!-- Sidebar with close button -->
+      <div v-if="isSidebarOpen" class="sidebar-wrapper">
+        <button class="close-btn btn btn-danger" @click="toggleSidebar">
+          <i class="ri-arrow-right-wide-line"></i>
+        </button>
+        <Sidebar />
+      </div>
     </div>
   </div>
 </template>
@@ -122,6 +144,7 @@ import plane from "../../assets/plane.png";
 import Sidebar from "../dropdowns/Sidebar.vue";
 import correct from "../../assets/correct.png";
 import wrong from "../../assets/wrong.png";
+import orange from "../../assets/orangedot.png";
 
 
 const isSidebarOpen = ref(false);
