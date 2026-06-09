@@ -33,22 +33,19 @@ import Dummy from "@/components/proof/Dummy.vue";
 <style scoped>
 .content_grid {
   display: flex;
-  /* gap: 1rem; */
   width: 100%;
+  height: 100%;
 }
 
 .col_small {
   flex: 2;
-  /* min-width: 0; */
 }
 
 .col_medium {
   flex: 5;
-  /* min-width: 0; */
 }
 
 .col_large {
   flex: 5;
-  /* min-width: 0; */
 }
 </style>

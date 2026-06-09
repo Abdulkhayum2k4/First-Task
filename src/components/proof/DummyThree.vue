@@ -1,48 +1,46 @@
 <template>
   <div class="checks py-3">
-    <div class="vh-100">
-      <div class="card shadow-sm border-0">
-        <div
-          class="card-header bg-white d-flex justify-content-between align-items-center"
-        >
-          <p class="mb-0 fw-bold">POS Checks (2)</p>
-        </div>
+    <div class="card shadow-sm border-0">
+      <div
+        class="card-header bg-white d-flex justify-content-between align-items-center"
+      >
+        <p class="mb-0 fw-bold">POS Checks (2)</p>
+      </div>
 
-        <div
-          class="card-body p-2 d-flex justify-content-between"
-          style="background-color: #ffe0e8"
-        >
-          <div class="d-flex">
-            <p><img :src="redpin" alt="" width="15" /></p>
-            <div class="ms-2">
-              <div class="fw-bold">
-                2156456
-                <p class="fw-semibold">Artistry Pub</p>
-              </div>
+      <div
+        class="card-body p-2 d-flex justify-content-between"
+        style="background-color: #ffe0e8"
+      >
+        <div class="d-flex">
+          <p><img :src="redpin" alt="" width="15" /></p>
+          <div class="ms-2">
+            <div class="fw-bold">
+              2156456
+              <p class="fw-semibold">Artistry Pub</p>
             </div>
-          </div>
-          <div>
-            <em>
-              <p class="fw-medium">23/20/24 12:17</p>
-            </em>
           </div>
         </div>
-        <div
-          class="p-2 d-flex justify-content-between"
-          style="background-color: #fafafa"
-        >
-          <div class="d-flex ms-3">
-            <p></p>
-            <div class="ms-2">
-              <p class="mb-0 pb-0 fw-bold">2332444</p>
-              <p class="fw-semibold">Le Cafe</p>
-            </div>
+        <div>
+          <em>
+            <p class="fs-6">23/20/24 12:17</p>
+          </em>
+        </div>
+      </div>
+      <div
+        class="p-2 d-flex justify-content-between"
+        style="background-color: #fafafa"
+      >
+        <div class="d-flex ms-3">
+          <p></p>
+          <div class="ms-2">
+            <p class="mb-0 pb-0 fw-bold">2332444</p>
+            <p class="fw-semibold">Le Cafe</p>
           </div>
-          <div class="">
-            <em>
-              <p class="fw-medium">23/20/24 19:18</p>
-            </em>
-          </div>
+        </div>
+        <div class="">
+          <em>
+            <p class="fs-6">23/20/24 19:18</p>
+          </em>
         </div>
       </div>
     </div>
@@ -54,7 +52,12 @@ import redpin from "../../assets/redpin.png";
 </script>
 
 <style scoped>
-.checks{
-  width: 229px;
+.checks {
+  width: 250px;
+  height: 100%;
+}
+.card {
+  border-radius: 10px !important;
+  overflow: hidden;
 }
 </style>
