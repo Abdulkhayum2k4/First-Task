@@ -1,7 +1,7 @@
 <template>
   <div class="reg-card">
     <div
-      class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom"
+      class="d-flex justify-content-between align-items-center px-3 py-3 border-bottom"
     >
       <h6 class="m-0 fw-bold">Reg Card - CNF 13134553</h6>
 
@@ -16,7 +16,7 @@
     </div>
 
     <div
-      class="border-bottom d-flex justify-content-between px-3 py-2"
+      class="border-bottom d-flex justify-content-between px-3 py-3"
       style="background-color: #f3f3f3"
     >
       <div>
@@ -41,7 +41,7 @@
 
     <div class="card-body-scroll">
       <div class="section-block">
-        <div class="d-flex justify-content-between align-items-center mb-2">
+        <div class="d-flex justify-content-between align-items-center my-2">
           <span class="section-title">Guest Details</span>
           <span style="font-size: 13px" class="fw-bold">Adult 1, Child 0</span>
         </div>
@@ -66,7 +66,6 @@
             </div>
           </div>
 
-          <!-- Right column -->
           <div class="guest_right">
             <div class="info-box mb-2">
               <span class="info-label">Address</span>
@@ -203,8 +202,6 @@
   </div>
 </template>
 
-<script setup></script>
-
 <style scoped>
 .missing {
   color: var(--primary-orange);
@@ -220,17 +217,10 @@
 
 .reg-card {
   background: #fff;
-  border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
-}
-
-.card-body-scroll {
-  overflow-y: auto;
-  flex: 1;
 }
 
 .section-block {
