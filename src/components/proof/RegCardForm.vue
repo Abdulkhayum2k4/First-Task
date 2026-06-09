@@ -45,45 +45,17 @@
           <span class="section-title">Guest Details</span>
           <span style="font-size: 13px" class="fw-bold">Adult 1, Child 0</span>
         </div>
-        <div class="row g-2">
-          <div class="col-6">
-            <div class="info-box">
+        <div class="guest_grid">
+          <!-- Left column -->
+          <div class="guest_left">
+            <div class="info-box mb-2">
               <span class="info-label">Name</span>
               <input type="text" class="info-input" placeholder="Enter name" />
             </div>
-          </div>
-          <div class="col-6">
-            <div class="info-box">
-              <span class="info-label">Address</span>
-              <textarea
-                type="text"
-                class="info-input"
-                placeholder="Enter address"
-                rows="5"
-              />
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="info-box">
+            <div class="info-box mb-2">
               <span class="info-label">Phone</span>
               <input type="text" class="info-input" placeholder="Enter phone" />
             </div>
-          </div>
-          <div class="col-6">
-            <div
-              class="info-box d-flex justify-content-between align-items-start"
-            >
-              <div class="w-100">
-                <span class="info-label">Passport</span>
-                <input
-                  type="text"
-                  class="info-input"
-                  placeholder="Enter passport number"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
             <div class="info-box">
               <span class="info-label">Email</span>
               <input
@@ -93,9 +65,28 @@
               />
             </div>
           </div>
+
+          <!-- Right column -->
+          <div class="guest_right">
+            <div class="info-box mb-2">
+              <span class="info-label">Address</span>
+              <textarea
+                class="info-input"
+                placeholder="Enter address"
+                rows="4"
+              />
+            </div>
+            <div class="info-box">
+              <span class="info-label">Passport</span>
+              <input
+                type="text"
+                class="info-input"
+                placeholder="Enter passport number"
+              />
+            </div>
+          </div>
         </div>
       </div>
-
       <div class="section-block">
         <span class="section-title d-block mb-2">Stay Details</span>
         <div class="row g-2">
@@ -131,22 +122,6 @@
               />
             </div>
           </div>
-          <div class="col-6">
-            <div class="info-box">
-              <span class="info-label">Room Type</span>
-              <input
-                type="text"
-                class="info-input"
-                placeholder="Enter room type"
-              />
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="info-box">
-              <span class="info-label">Nights</span>
-              <input type="number" class="info-input" placeholder="0" />
-            </div>
-          </div>
         </div>
       </div>
 
@@ -157,32 +132,16 @@
             <div class="info-box">
               <div class="d-flex justify-content-between">
                 <span class="info-label">Card Type</span>
-                <span class="info-label">Expiry</span>
+                <span class="info-label">XX/XX</span>
               </div>
               <div class="d-flex justify-content-between">
                 <input
-                  type="text"
+                  type="number"
                   class="info-input"
-                  placeholder="Card type"
-                  style="width: 48%"
-                />
-                <input
-                  type="text"
-                  class="info-input"
-                  placeholder="MM/YY"
+                  placeholder="XXXXXXXXXXX 0000"
                   style="width: 48%"
                 />
               </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="info-box">
-              <span class="info-label">Card Number</span>
-              <input
-                type="text"
-                class="info-input"
-                placeholder="XXXXXXXXXXX 0000"
-              />
             </div>
           </div>
         </div>
@@ -197,22 +156,12 @@
               <input
                 type="text"
                 class="info-input"
-                placeholder="Enter OTA name"
-              />
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="info-box">
-              <span class="info-label">Booking ID</span>
-              <input
-                type="text"
-                class="info-input"
                 placeholder="Enter booking ID"
               />
             </div>
           </div>
-          <div class="col-12 d-flex justify-content-end">
-            <button class="btn btn-danger px-4">Actions</button>
+          <div class="col-6 d-flex justify-content-end">
+            <button class="btn btn-danger px-4 align-self-center">Actions</button>
           </div>
         </div>
       </div>
@@ -298,7 +247,6 @@
   border-radius: 6px;
   padding: 4px 10px;
   background: #fff;
-  height: 100%;
 }
 
 .info-label {
@@ -322,5 +270,29 @@
 .info-input::placeholder {
   color: #bbb;
   font-weight: 400;
+}
+
+.guest_grid {
+  display: flex;
+  gap: 8px;
+}
+
+.guest_left {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.guest_right {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea.info-input {
+  resize: none;
+  font-family: inherit;
 }
 </style>
