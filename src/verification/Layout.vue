@@ -4,9 +4,12 @@ import ThreeIcons from "@/components/proof/ThreeIcons.vue";
 
 <template>
   <div class="whole_content">
-    <header class="sidebar p-3">
+    <header class="sidebar p-3 position-relative">
       <div class="header_content py-3">
         <slot name="side_content"></slot>
+        <div class="three_icons">
+          <ThreeIcons class="dots" />
+        </div>
       </div>
     </header>
     <main class="main_area p-3">
@@ -14,9 +17,6 @@ import ThreeIcons from "@/components/proof/ThreeIcons.vue";
         <slot name="content"></slot>
       </div>
     </main>
-    <div class="three_icons">
-      <ThreeIcons class="dots" />
-    </div>
   </div>
 </template>
 
@@ -24,7 +24,7 @@ import ThreeIcons from "@/components/proof/ThreeIcons.vue";
 .whole_content {
   display: flex;
   background: var(--bg-clr);
-  height: 87vh;
+  min-height: 87vh;
 }
 
 .sidebar {
@@ -38,18 +38,14 @@ import ThreeIcons from "@/components/proof/ThreeIcons.vue";
 }
 
 .main_content {
-  background-color: white;
-  height: 83vh;
+  /* background-color: white; */
+  min-height: 83vh;
 }
 
 .three_icons {
-  position: relative;
-}
-
-.dots {
   position: absolute;
-  bottom: 0;
-  left: 2rem;
-  transform: translateY(50%);
+  bottom: 1%;
+  left: 20%;
+  transform: translateY(-50%);
 }
 </style>

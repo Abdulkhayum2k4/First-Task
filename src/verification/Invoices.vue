@@ -5,8 +5,7 @@
       <Sidebar />
     </template>
 
-    <template #content>
-    </template>
+    <template #content></template>
   </Layout>
 </template>
 
