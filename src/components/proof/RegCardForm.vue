@@ -161,7 +161,9 @@
             </div>
           </div>
           <div class="col-6 d-flex justify-content-end">
-            <button class="btn btn-danger px-4 align-self-center">Actions</button>
+            <button class="btn btn-danger px-4 align-self-center">
+              Actions
+            </button>
           </div>
         </div>
       </div>
@@ -247,6 +249,7 @@
   border-radius: 6px;
   padding: 4px 10px;
   background: #fff;
+  background: #fafafa;
 }
 
 .info-label {
@@ -263,8 +266,8 @@
   font-size: 13px;
   font-weight: 500;
   color: #222;
-  background: transparent;
   padding: 0;
+  background: #fafafa;
 }
 
 .info-input::placeholder {
