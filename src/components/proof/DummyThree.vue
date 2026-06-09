@@ -1,7 +1,7 @@
 <template>
-  <div class="container-fluid py-3">
+  <div class="checks py-3">
     <div class="vh-100">
-      <div class="card rounded shadow-sm border-0">
+      <div class="card shadow-sm border-0">
         <div
           class="card-header bg-white d-flex justify-content-between align-items-center"
         >
@@ -52,3 +52,9 @@
 <script setup>
 import redpin from "../../assets/redpin.png";
 </script>
+
+<style scoped>
+.checks{
+  width: 229px;
+}
+</style>
