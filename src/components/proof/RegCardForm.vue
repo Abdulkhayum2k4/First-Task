@@ -4,7 +4,6 @@
       class="d-flex justify-content-between align-items-center px-3 py-3 border-bottom"
     >
       <h6 class="m-0 fw-bold">Reg Card - CNF 13134553</h6>
-
       <div class="d-flex align-items-center gap-2">
         <span class="missing fw-semibold" style="font-size: 13px">
           <i class="ri-error-warning-line"></i> 5 details missing
