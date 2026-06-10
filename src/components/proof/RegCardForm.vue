@@ -15,7 +15,7 @@
     </div>
 
     <div
-      class="border-bottom d-flex justify-content-between px-3 py-3"
+      class="border-bottom d-flex justify-content-between px-3 py-2"
       style="background-color: #f3f3f3; font-size: 13px"
     >
       <div>
@@ -165,7 +165,7 @@
         </div>
       </div>
 
-      <div class="section-block">
+      <div class="section-block_last">
         <span class="section-title d-block mb-2">Membership Details</span>
         <div class="row g-2">
           <div class="col-6">
@@ -222,8 +222,12 @@
 }
 
 .section-block {
-  padding: 12px 16px;
+  padding: 20px 16px;
   border-bottom: 1px solid #eee;
+}
+
+.section-block_last {
+  padding: 20px 16px;
 }
 
 .section-title {
@@ -242,7 +246,7 @@
 
 .info-label {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   margin-bottom: 4px;
 }

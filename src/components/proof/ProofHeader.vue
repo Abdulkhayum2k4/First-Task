@@ -90,7 +90,7 @@ const collapsed = ref(false);
 
     <div class="d-flex align-items-center gap-4">
       <div v-if="!collapsed" class="text-center">
-        <div class="d-flex">
+        <div class="d-flex align-items-center">
           <div class="position-relative">
             <img :src="Ellipse_654" class="kla k" />
             <p class="alk position-absolute translate-middle-x">A</p>
@@ -259,17 +259,9 @@ p {
   height: 30px;
 }
 
-.k {
-  z-index: 3;
-}
-
 .l {
   margin: -8px;
   z-index: 2;
-}
-
-.a {
-  z-index: 1;
 }
 
 .alk {

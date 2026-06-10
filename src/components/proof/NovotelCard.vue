@@ -22,7 +22,7 @@
   </div>
 
   <div class="col-4 w-100">
-    <div class="px-2 pb-2">
+    <div class="cnfContainer px-2 pb-2">
       <img class="cnfImg" :src="cnfregcardd" />
     </div>
   </div>
@@ -36,5 +36,9 @@ import cnfregcardd from "../../assets/cnfregcardd.png";
 <style scoped>
 .cnfImg{
   width: 100%;
+}
+
+.cnfContainer{
+  background-color: #f7f7f7;
 }
 </style>
