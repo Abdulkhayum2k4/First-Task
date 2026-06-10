@@ -2,7 +2,7 @@
   <div class="bg-white px-2 pb-5 pt-2 rounded">
     <div class=" d-flex gap-4 border-bottom pb-2">
       <p class="fw-semibold">3 Folios in total</p>
-      <p style="color: #FF9933;"> <img :src="orange" alt=""> Partly Paid</p>
+      <p style="color: #FF9933;" class="fw-semibold"> <img :src="orange" alt=""> Partly Paid</p>
     </div>
     <div class="table-container border rounded-3 mt-3">
       <table class="table table-bordered table-striped p-3 rounded-3">
@@ -119,12 +119,9 @@
         </tbody>
       </table>
 
-      <!-- Action Button -->
       <button v-if="!isSidebarOpen" class="action-btn btn btn-danger" @click="toggleSidebar">
         Actions <span><i class="ri-arrow-up-wide-line"></i></span>
       </button>
-
-      <!-- Sidebar with close button -->
       <div v-if="isSidebarOpen" class="sidebar-wrapper">
         <button class="close-btn btn btn-danger" @click="toggleSidebar">
           <i class="ri-arrow-right-wide-line"></i>
