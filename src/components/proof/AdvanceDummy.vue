@@ -6,11 +6,11 @@
       >
         <div class="d-flex gap-2">
           <p><img :src="pdficon" class="object-fit-contain" /></p>
-          <p class="mb-0 fw-bold">Advance 1</p>
+          <p class="mb-0 fw-bold pt-1" style="font-size: 11px;">Advance 1</p>
         </div>
         <div class="d-flex gap-1">
           <p class="fw-semibold"><i class="ri-arrow-left-s-line"></i></p>
-          <p class="fw-semibold text-white bg-secondary px-2 rounded">1</p>
+          <p class="fw-semibold text-white bg-secondary px-2 rounded" style="font-size: 14px;">1</p>
           <p class="fw-semibold">of 3</p>
           <p class="fw-semibold"><i class="ri-arrow-right-s-line"></i></p>
         </div>

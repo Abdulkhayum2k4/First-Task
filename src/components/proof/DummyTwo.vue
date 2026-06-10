@@ -1,9 +1,8 @@
 <template>
-  <div class="container-fluid py-3">
+  <div class="container-fluid py-3 ">
     <div class="card shadow-sm border-0">
       <div
-        class="card-header bg-white d-flex justify-content-between align-items-center gap-1"
-      >
+        class="card-header bg-white d-flex justify-content-between align-items-center gap-1" style="font-size: 11px;">
         <div class="d-flex gap-2">
           <p>
             <img :src="pdficon" class="object-fit-contain" />

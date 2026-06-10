@@ -14,11 +14,7 @@
           >
             <div class="d-flex align-items-center gap-2">
               <div
-                style="
-                  background-color: var(--primary-red);
-                  height: 30px;
-                  width: 5px;
-                "
+                style="background-color: var(--primary-red); height: 25px; width: 5px"
                 class="rounded"
               ></div>
               <p class="fw-medium mb-0">Trx ID on terminal : 18293</p>
@@ -69,15 +65,8 @@
             class="d-flex justify-content-between align-items-center bg-secondary-subtle px-2 mt-1"
             style="height: 25px"
           >
-            <div class="d-flex align-items-center gap-2">
-              <div
-                style="
-                  background-color: var(--primary-red);
-                  height: 21px;
-                  width: 5px;
-                "
-                class="rounded"
-              ></div>
+            <div class="d-flex align-items-center gap-2 ps-2">
+              
               <p class="fw-medium mb-0">Trx iD on terminal : 18293</p>
             </div>
             <p class="mb-0 fw-semibold" style="color: var(--primary-green)">
