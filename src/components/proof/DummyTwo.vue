@@ -10,24 +10,25 @@
           </p>
           <p class="mb-0 fw-semibold">firstcheck.pdf</p>
         </div>
-        <div class="d-flex">
+        <div class="d-flex gap-2">
           <p class="fw-semibold"><i class="ri-arrow-left-s-line"></i></p>
           <p class="fw-semibold text-white bg-secondary px-2 rounded">1</p>
-          <p class="fw-semibold">of 3</p>
+          <p class="fw-semibold">of</p>
+          <p class="fw-semibold">3</p>
           <p class="fw-semibold"><i class="ri-arrow-right-s-line"></i></p>
         </div>
-        <div class="d-flex gap-3">
+        <div class="d-flex gap-4">
           <p>
-            <img :src="refresh" />
+            <img :src="refresh" width="15" />
           </p>
           <p>
-            <img :src="scanner" />
+            <img :src="scanner" width="15" />
           </p>
           <p>
-            <img :src="download" />
+            <img :src="download" width="15" />
           </p>
           <p>
-            <img :src="fullscreen" />
+            <img :src="fullscreen" width="15" />
           </p>
         </div>
       </div>
