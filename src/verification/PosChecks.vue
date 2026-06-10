@@ -34,7 +34,7 @@ import Dummy from "@/components/proof/Dummy.vue";
 .content_grid {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 83vh;
 }
 
 .col_small {
