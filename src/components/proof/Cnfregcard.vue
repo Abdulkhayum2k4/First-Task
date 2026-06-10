@@ -21,9 +21,9 @@
     </div>
   </div>
 
-  <div class="col-4">
+  <div class="col-4 w-100">
     <div class="px-2 pb-2">
-      <img :src="cnfregcardd"/>
+      <img class="cnfImg" :src="cnfregcardd" />
     </div>
   </div>
 </template>
@@ -32,3 +32,9 @@ import downloadd from "../../assets/downloaddd.png";
 import sharee from "../../assets/sharee.png";
 import cnfregcardd from "../../assets/cnfregcardd.png";
 </script>
+
+<style scoped>
+.cnfImg{
+  width: 100%;
+}
+</style>

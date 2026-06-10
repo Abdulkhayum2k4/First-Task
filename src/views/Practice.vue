@@ -51,6 +51,7 @@
 
 <script setup>
 import redpin from "../assets/redpin.png";
+console.log("Vivek")
 </script>
 
 <style scoped>
