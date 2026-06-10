@@ -12,7 +12,7 @@
         </div>
         <div class="card_column">
           <RegCardForm />
-        </div> 
+        </div>
       </div>
     </template>
   </Layout>
@@ -22,8 +22,8 @@
 import ProofHeader from "@/components/proof/ProofHeader.vue";
 import Layout from "./Layout.vue";
 import Sidebar from "./Sidebar.vue";
-import CnfRegCard from "@/components/proof/CnfRegCard.vue";
-import RegCardForm from "@/components/proof/RegCardForm.vue";
+import RegCardForm from "../components/proof/RegCardForm.vue";
+import CnfRegCard from "../components/proof/CnfRegCard.vue";
 </script>
 
 <style scoped>

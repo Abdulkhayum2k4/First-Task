@@ -6,20 +6,12 @@
     </template>
 
     <template #content>
-  <div class="row g-3 p-3 h-100">
-    <div class="col-4">
-      <PaymentsDummy />
-    </div>
-
-    <div class="col-4">
-      <AdvanceDummy />
-    </div>
-
-    <div class="col-4">
-      <PaymentDetailsDummy />
-    </div>
-  </div>
-</template>
+      <div class="payments_grid">
+        <div class="payment_item"><PaymentsDummy /></div>
+        <div class="payment_item"><AdvanceDummy /></div>
+        <div class="payment_item"><PaymentDetailsDummy /></div>
+      </div>
+    </template>
   </Layout>
 </template>
 
@@ -31,3 +23,20 @@ import AdvanceDummy from "@/components/proof/AdvanceDummy.vue";
 import PaymentDetailsDummy from "@/components/proof/PaymentDetailsDummy.vue";
 import PaymentsDummy from "@/components/proof/PaymentsDummy.vue";
 </script>
+
+<style scoped>
+.payments_grid {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  height: 100%;
+  align-items: stretch;
+}
+
+.payment_item {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+</style>

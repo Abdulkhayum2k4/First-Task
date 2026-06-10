@@ -15,15 +15,15 @@
         </p>
       </div>
       <div class="d-flex gap-3 align-self-center">
-        <p><img :src="sharee" alt="" height="15px" width="20px" /></p>
-        <p><img :src="downloadd" alt="" height="25px" width="25px" /></p>
+        <p><img :src="sharee" height="15px" width="20px" /></p>
+        <p><img :src="downloadd" height="25px" width="25px" /></p>
       </div>
     </div>
   </div>
 
   <div class="col-4">
     <div class="px-2 pb-2">
-      <img :src="cnfregcardd" alt="" width="700" height="780" />
+      <img :src="cnfregcardd"/>
     </div>
   </div>
 </template>
