@@ -3,7 +3,7 @@ import ThreeIcons from "@/components/proof/ThreeIcons.vue";
 </script>
 
 <template>
-  <div class="whole_content">
+  <div class="whole_content w-100">
     <header class="sidebar p-3 position-relative">
       <div class="header_content py-3">
         <slot name="side_content"></slot>
@@ -25,6 +25,7 @@ import ThreeIcons from "@/components/proof/ThreeIcons.vue";
   display: flex;
   background: var(--bg-clr);
   min-height: 87vh;
+  min-width: 1496px;
 }
 
 .sidebar {
@@ -34,11 +35,10 @@ import ThreeIcons from "@/components/proof/ThreeIcons.vue";
 
 .main_area {
   flex: 1;
-  min-width: 0;
+  min-width: 1300px;
 }
 
 .main_content {
-  /* background-color: white; */
   min-height: 83vh;
 }
 

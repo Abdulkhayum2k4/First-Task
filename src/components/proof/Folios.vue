@@ -1,11 +1,13 @@
 <template>
-  <div class="bg-white px-2 pb-5 pt-2 rounded">
-    <div class=" d-flex gap-4 border-bottom pb-2">
+  <div class="bg-white p-3 rounded">
+    <div class="d-flex gap-4 border-bottom pb-2">
       <p class="fw-semibold">3 Folios in total</p>
-      <p style="color: #FF9933;" class="fw-semibold"> <img :src="orange" alt=""> Partly Paid</p>
+      <p style="color: #ff9933" class="fw-semibold">
+        <img :src="orange" alt="" /> Partly Paid
+      </p>
     </div>
     <div class="table-container border rounded-3 mt-3">
-      <table class="table table-bordered table-striped p-3 rounded-3">
+      <table class="table table-bordered table-striped rounded-3">
         <thead class="bg-secondary">
           <tr style="font-size: 13px" class="bg-secondary">
             <th><span>Folio</span></th>
@@ -72,54 +74,52 @@
                 <img :src="plane" alt="" />
               </span>
             </td>
-            <td><span>{{ document.Company }}</span></td>
-            <td><span>{{ document.Stayperiod }}</span></td>
-            <td><span>{{ document.Room }}</span></td>
-            <td><span>{{ document.Guests }}</span></td>
-            <td><span>{{ document.GSTN }}</span></td>
-            <td><span>{{ document.Membership }}</span></td>
-            <td><span>{{ document.Rate }}</span></td>
             <td>
-              <span v-if="document.Signature == 'Signed'" style="color: #17c400">Signed</span>
+              <span>{{ document.Company }}</span>
+            </td>
+            <td>
+              <span>{{ document.Stayperiod }}</span>
+            </td>
+            <td>
+              <span>{{ document.Room }}</span>
+            </td>
+            <td>
+              <span>{{ document.Guests }}</span>
+            </td>
+            <td>
+              <span>{{ document.GSTN }}</span>
+            </td>
+            <td>
+              <span>{{ document.Membership }}</span>
+            </td>
+            <td>
+              <span>{{ document.Rate }}</span>
+            </td>
+            <td>
+              <span v-if="document.Signature == 'Signed'" style="color: #17c400"
+                >Signed</span
+              >
               <span v-else style="color: #fe5358" class="fw-semibold">
-                <i>
-                  Not Signed
-                </i>
+                <i> Not Signed </i>
               </span>
             </td>
-            <!-- <td>
-            <span>{{ document.Stayperiod }}</span>
-          </td> -->
-            <!-- <td>
-            <span>{{ document.Room }}</span>
-          </td>
-          <td>
-            <span>{{ document.Guests }}</span>
-          </td>
-          <td>
-            <span>{{ document.GSTN }}</span>
-          </td>
-          <td>
-            <span>{{ document.Membership }}</span>
-          </td> -->
-            <!-- <td>
-            <span>{{ document.Rate }}</span>
-          </td>
-          <td>
-            <span v-if="document.Signature == 'Signed'" style="color: #17c400"
-            >Signed</span
-            >
-            <span v-else style="color: #fe5358">Not Signed</span>
-          </td> -->
             <td>
-              <span v-if="document.Payment == 'Paid'" style="color: #17c400"> <img :src="correct" alt=""> Paid</span>
-              <span v-else style="color: #fe5358" class="fw-semibold"> <img :src="wrong" alt=""> <i>Not Paid</i></span>
+              <span v-if="document.Payment == 'Paid'" style="color: #17c400">
+                <img :src="correct" alt="" /> Paid</span
+              >
+              <span v-else style="color: #fe5358" class="fw-semibold">
+                <img :src="wrong" alt="" /> <i>Not Paid</i></span
+              >
             </td>
           </tr>
         </tbody>
       </table>
 
-      <button v-if="!isSidebarOpen" class="action-btn btn btn-danger" @click="toggleSidebar">
+      <button
+        v-if="!isSidebarOpen"
+        class="action-btn btn btn-danger"
+        @click="toggleSidebar"
+      >
         Actions <span><i class="ri-arrow-up-wide-line"></i></span>
       </button>
       <div v-if="isSidebarOpen" class="sidebar-wrapper">
@@ -142,7 +142,6 @@ import Sidebar from "../dropdowns/Sidebar.vue";
 import correct from "../../assets/correct.png";
 import wrong from "../../assets/wrong.png";
 import orange from "../../assets/orangedot.png";
-
 
 const isSidebarOpen = ref(false);
 
@@ -202,6 +201,22 @@ const Folios = ref([
 <style scoped>
 .table-container {
   position: relative;
+  width: 100%;
+}
+
+.table-container table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table-container th,
+.table-container td {
+  font-size: clamp(11px, 1vw, 13px);
+  padding: 4px 6px;
+  word-break: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .action-btn {

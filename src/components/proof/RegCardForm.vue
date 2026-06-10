@@ -16,21 +16,23 @@
 
     <div
       class="border-bottom d-flex justify-content-between px-3 py-3"
-      style="background-color: #f3f3f3; font-size: 13pxq;"
+      style="background-color: #f3f3f3; font-size: 13px"
     >
       <div>
-        <span class="me-2 fw-bold">Guest</span><span class="verified fw-semibold">
-          <i class="ri-thumb-up-line"></i> Signed</span>
+        <span class="me-2 fw-bold">Guest</span
+        ><span class="verified fw-semibold">
+          <i class="ri-thumb-up-line"></i> Signed</span
+        >
       </div>
       <div>
         <span class="me-2 fw-bold">Front Desk</span
-        ><span class="signed fw-semibold" style="color: #e23744;"
+        ><span class="signed fw-semibold" style="color: #e23744"
           ><i class="ri-thumb-down-line"></i> Not Signed</span
         >
       </div>
       <div>
         <span class="me-2 fw-bold">Duty Manager</span
-        ><span class="signed fw-semibold" style="color: #e23744;"
+        ><span class="signed fw-semibold" style="color: #e23744"
           ><i class="ri-thumb-down-line"></i> Not Signed</span
         >
       </div>
@@ -43,7 +45,6 @@
           <span style="font-size: 13px" class="fw-bold">Adult 1, Child 0</span>
         </div>
         <div class="guest_grid">
-          <!-- Left column -->
           <div class="guest_left">
             <div class="info-box mb-2">
               <span class="info-label">Name</span>
@@ -205,7 +206,6 @@
 }
 
 .verified {
-  /* color: var(--primary-green); */
   color: #48f332;
 }
 

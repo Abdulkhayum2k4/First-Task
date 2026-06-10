@@ -16,7 +16,9 @@ const collapsed = ref(false);
 </script>
 
 <template>
-  <div class="d-flex justify-content-between align-items-center px-4 py-2 whole">
+  <div
+    class="d-flex justify-content-between align-items-center px-4 py-2 whole"
+  >
     <div class="d-flex align-items-center gap-3">
       <i
         class="ri-arrow-left-line fs-4"
@@ -49,7 +51,10 @@ const collapsed = ref(false);
       </div>
     </div>
 
-    <div v-if="!collapsed" class="d-flex align-items-center gap-5 flex-grow-1 justify-content-center">
+    <div
+      v-if="!collapsed"
+      class="d-flex align-items-center gap-5 flex-grow-1 justify-content-center"
+    >
       <div class="d-flex align-items-center gap-2">
         <img :src="praying" class="icons p-2 rounded" />
         <div>
@@ -107,10 +112,13 @@ const collapsed = ref(false);
 
       <template v-if="collapsed">
         <div v-if="route.path === '/regCard'">
-          <div class="d-flex align-items-center  gap-3">
-            <div  class="px-3 py-1 rounded-pill d-flex align-items-center"  style="background: #cfeecb; color: #25b700; font-size: 12px">
+          <div class="d-flex align-items-center gap-3">
+            <div
+              class="px-3 py-1 rounded-pill d-flex align-items-center"
+              style="background: #cfeecb; color: #25b700; font-size: 12px"
+            >
               <i class="ri-circle-fill me-1" style="font-size: 7px"></i>
-              Checked-in 
+              Checked-in
             </div>
 
             <div style="color: #25b700; font-size: 15px; font-weight: 600">
@@ -251,23 +259,22 @@ p {
   height: 30px;
 }
 
-.k {  
+.k {
   z-index: 3;
 }
 
 .l {
-  margin-left: -8px;
+  margin: -8px;
   z-index: 2;
 }
 
 .a {
-  margin-left: -8px;
   z-index: 1;
 }
 
 .alk {
   bottom: 20%;
-  left: 40%;
+  left: 50%;
   font-size: 12px;
   color: white;
   font-weight: 600;
