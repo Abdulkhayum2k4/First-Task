@@ -61,7 +61,7 @@ const menuItems = [
     path: "/posChecks",
   },
   {
-    name: "Payments & c...",
+    name: "Payments",
     completed: true,
     path: "/payments",
   },

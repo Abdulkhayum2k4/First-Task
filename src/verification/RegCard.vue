@@ -23,7 +23,7 @@ import ProofHeader from "@/components/proof/ProofHeader.vue";
 import Layout from "./Layout.vue";
 import Sidebar from "./Sidebar.vue";
 import RegCardForm from "../components/proof/RegCardForm.vue";
-import CnfRegCard from "../components/proof/CnfRegCard.vue";
+import CnfRegCard from "../components/proof/NovotelCard.vue";
 </script>
 
 <style scoped>
