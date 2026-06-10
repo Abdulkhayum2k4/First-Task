@@ -1,10 +1,10 @@
 <template>
-  <div class="container-fluid py-0 bodyy">
+  <div class="container-fluid py-0 bodyy" style="font-size: 14px;">
     <div class="card rounded shadow-sm border-0">
       <div
         class="card-header bg-white d-flex justify-content-between align-items-center"
       >
-        <p class="fw-bold">Payment details - Advance 1</p>
+        <p class="fw-bolder" style="font-size: 14px;">Payment details - Advance 1</p>
       </div>
 
       <div class="card_body_wrapper border px-2 py-1">
@@ -74,7 +74,7 @@
           </div>
         </div>
 
-        <button class="actions_btn">Actions</button>
+        <button class="actions_btn rounded rounded-2 px-2">Actions</button>
       </div>
     </div>
   </div>
@@ -126,7 +126,6 @@ import greendone from "../../assets/greendone.png";
   border: none;
   border-radius: 4px;
   font-weight: 600;
-  padding: 4px 10px;
   cursor: pointer;
 }
 </style>

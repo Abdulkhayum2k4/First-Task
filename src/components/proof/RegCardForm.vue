@@ -16,23 +16,21 @@
 
     <div
       class="border-bottom d-flex justify-content-between px-3 py-3"
-      style="background-color: #f3f3f3"
+      style="background-color: #f3f3f3; font-size: 13pxq;"
     >
       <div>
-        <span class="me-2">Guest</span
-        ><span class="me-5 verified"
-          ><i class="ri-thumb-up-line"></i> Signed</span
-        >
+        <span class="me-2 fw-bold">Guest</span><span class="verified fw-semibold">
+          <i class="ri-thumb-up-line"></i> Signed</span>
       </div>
       <div>
-        <span class="me-2">Front Desk</span
-        ><span class="signed"
+        <span class="me-2 fw-bold">Front Desk</span
+        ><span class="signed fw-semibold" style="color: #e23744;"
           ><i class="ri-thumb-down-line"></i> Not Signed</span
         >
       </div>
       <div>
-        <span class="me-2">Duty Manager</span
-        ><span class="signed"
+        <span class="me-2 fw-bold">Duty Manager</span
+        ><span class="signed fw-semibold" style="color: #e23744;"
           ><i class="ri-thumb-down-line"></i> Not Signed</span
         >
       </div>
@@ -207,7 +205,8 @@
 }
 
 .verified {
-  color: var(--primary-green);
+  /* color: var(--primary-green); */
+  color: #48f332;
 }
 
 .signed {
