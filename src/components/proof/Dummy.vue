@@ -1,5 +1,5 @@
 <template>
-  <div class="py-3 bodyy" style="font-size: 12px">
+  <div class="py-2 bodyy" style="font-size: 12px">
     <div class="card rounded shadow-sm border-0">
       <div
         class="card-header bg-white d-flex justify-content-between align-items-center"

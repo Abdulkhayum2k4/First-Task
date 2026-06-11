@@ -1,12 +1,16 @@
 <template>
-  <div class="checks py-3">
+  <div class="checks py-2">
     <div class="card shadow-sm border-0">
-
-      <div class="card-header bg-white d-flex justify-content-between align-items-center">
-        <p class="mb-0 fw-semibold" style="font-size: 15px;">POS Checks (2)</p>
+      <div
+        class="card-header bg-white d-flex justify-content-between align-items-center"
+      >
+        <p class="mb-0 fw-semibold" style="font-size: 15px">POS Checks (2)</p>
       </div>
 
-      <div class="card_container" style="background-color: #f8f8f8; font-size: 13px;">
+      <div
+        class="card_container"
+        style="background-color: #f8f8f8; font-size: 13px"
+      >
         <div
           class="card-body p-2 d-flex justify-content-between mt-2"
           style="background-color: #ffe0e8"
@@ -22,7 +26,7 @@
           </div>
           <div>
             <em>
-              <p class="fw-normal" style="font-size: 12px;">23/20/24 12:17</p>
+              <p class="fw-normal" style="font-size: 12px">23/20/24 12:17</p>
             </em>
           </div>
         </div>
@@ -39,12 +43,11 @@
           </div>
           <div>
             <em>
-              <p class="fw-normal" style="font-size: 12px;">23/20/24 19:18</p>
+              <p class="fw-normal" style="font-size: 12px">23/20/24 19:18</p>
             </em>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>

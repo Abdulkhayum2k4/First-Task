@@ -1,10 +1,12 @@
 <template>
-  <div class="container-fluid py-0 bodyy" style="font-size: 14px;">
+  <div class="container-fluid py-0 bodyy" style="font-size: 14px">
     <div class="card rounded shadow-sm border-0">
       <div
         class="card-header bg-white d-flex justify-content-between align-items-center"
       >
-        <p class="fw-bolder" style="font-size: 14px;">Payment details - Advance 1</p>
+        <p class="fw-bolder" style="font-size: 14px">
+          Payment details - Advance 1
+        </p>
       </div>
 
       <div class="card_body_wrapper border px-2 py-1">
@@ -101,6 +103,8 @@ import greendone from "../../assets/greendone.png";
   height: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 10px !important;
+  overflow: hidden;
 }
 
 .card_body_wrapper {

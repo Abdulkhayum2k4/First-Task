@@ -149,6 +149,8 @@ import bglav from "../../assets/bglav.png";
   height: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 10px !important;
+  overflow: hidden;
 }
 
 .card_body_wrapper {

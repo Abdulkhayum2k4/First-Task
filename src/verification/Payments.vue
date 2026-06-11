@@ -28,7 +28,6 @@ import PaymentsDummy from "@/components/proof/PaymentsDummy.vue";
 .payments_grid {
   display: flex;
   gap: 0.5rem;
-  padding: 1rem;
   height: 100%;
   align-items: stretch;
 }

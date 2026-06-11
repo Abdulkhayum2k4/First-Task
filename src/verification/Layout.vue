@@ -5,7 +5,7 @@ import ThreeIcons from "@/components/proof/ThreeIcons.vue";
 <template>
   <div class="whole_content w-100">
     <header class="sidebar p-3 position-relative">
-      <div class="header_content py-3">
+      <div class="header_content py-2">
         <slot name="side_content"></slot>
         <div class="three_icons">
           <ThreeIcons class="dots" />
