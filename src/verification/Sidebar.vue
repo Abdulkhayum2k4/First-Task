@@ -4,7 +4,7 @@
       v-for="item in menuItems"
       :key="item.name"
       :to="item.path"
-      class="menu-item py-1 fs-6 text-decoration-none d-block"
+      class="menu-item py-1 fs-6 text-decoration-none d-block fw-light"
       active-class="active"
     >
       <div
@@ -82,6 +82,7 @@ const menuItems = [
 
 <style scoped>
 .menu-item {
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
   color: #222;
   position: relative;

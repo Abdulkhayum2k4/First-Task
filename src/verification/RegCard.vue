@@ -8,7 +8,7 @@
     <template #content>
       <div class="cards_container">
         <div class="card_column">
-          <CnfRegCard />
+          <NovotelCard />
         </div>
         <div class="card_column">
           <RegCardForm />
@@ -23,7 +23,7 @@ import ProofHeader from "@/components/proof/ProofHeader.vue";
 import Layout from "./Layout.vue";
 import Sidebar from "./Sidebar.vue";
 import RegCardForm from "../components/proof/RegCardForm.vue";
-import CnfRegCard from "../components/proof/NovotelCard.vue";
+import NovotelCard from "../components/proof/NovotelCard.vue";
 </script>
 
 <style scoped>
@@ -31,6 +31,8 @@ import CnfRegCard from "../components/proof/NovotelCard.vue";
   display: flex;
   gap: 1rem;
   width: 100%;
+  height: 83vh;
+  overflow: hidden;
 }
 
 .card_column {
@@ -38,5 +40,7 @@ import CnfRegCard from "../components/proof/NovotelCard.vue";
   min-width: 0;
   background-color: white;
   border-radius: 10px;
+  overflow-y: auto;
+  height: 100%;
 }
 </style>

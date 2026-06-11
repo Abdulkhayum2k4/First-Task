@@ -1,10 +1,11 @@
 <template>
- <div
-  v-for="item in menuItems"
-  :key="item.name"
-  class="menu-item rounded py-2 fs-6"
-  :class="{ active: activeMenu === item.name }"
-  @click="activeMenu = item.name">
+  <div
+    v-for="item in menuItems"
+    :key="item.name"
+    class="menu-item rounded py-2 fs-6"
+    :class="{ active: activeMenu === item.name }"
+    @click="activeMenu = item.name"
+  >
     <div class="d-flex justify-content-between align-items-center w-100">
       <div class="d-flex align-items-center gap-2">
         <span v-if="item.alert == true" class="ps-1 ms-1">{{ item.name }}</span>
@@ -34,7 +35,7 @@ const activeMenu = ref("ID Proof ");
 const menuItems = [
   {
     name: "ID Proof",
-    
+
     alert: true,
     completed: false,
     path: "/idProof",

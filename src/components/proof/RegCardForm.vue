@@ -204,6 +204,10 @@
 .missing {
   color: var(--primary-orange);
 }
+.card-body-scroll {
+  overflow-y: auto;
+  max-height: calc(83vh - 90px);
+}
 
 .verified {
   color: #48f332;
