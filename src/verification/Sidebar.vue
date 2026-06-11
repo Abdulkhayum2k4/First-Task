@@ -68,7 +68,7 @@ const menuItems = [
     path: "/posChecks",
   },
   {
-    name: "Payments & c...",
+    name: "Payments",
     completed: true,
     path: "/payments",
   },
@@ -82,7 +82,7 @@ const menuItems = [
 
 <style scoped>
 .menu-item {
-  font-family: 'Inter', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 18px;
   color: #222;
   position: relative;

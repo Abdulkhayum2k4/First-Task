@@ -23,44 +23,38 @@
       <div class="card_container">
         <div class="card-body" style="background-color: #fafafa">
           <div class="mb-4 p-1 border-bottom">
-            <p class="mb-1 fw-semibold" style="font-size: 13px">
-              Check Details
-            </p>
+            <p class="mb-1 fw-semibold section-title">Check Details</p>
             <div class="p-2">
-              <div class="d-flex mb-3 gap-2">
-                <div style="font-size: 12px">Check Number</div>
-                <div class="fw-semibold" style="font-size: 13px">234234</div>
+              <div class="info-row">
+                <span class="info-label">Check Number</span>
+                <span class="info-value">234234</span>
               </div>
-              <div class="d-flex mb-3 gap-2">
-                <div style="font-size: 12px">Check Date</div>
-                <div class="fw-semibold" style="font-size: 13px">
-                  21/02/2024 12:10 - 21/02/2024 14:55
-                </div>
+              <div class="info-row">
+                <span class="info-label">Check Date</span>
+                <span class="info-value"
+                  >21/02/2024 12:10 - 21/02/2024 14:55</span
+                >
               </div>
-              <div class="mb-3 d-flex gap-2">
-                <div style="font-size: 12px">Total Bill Amount</div>
-                <div class="fw-semibold" style="font-size: 13px">
-                  ₹ 32,999.30
-                </div>
+              <div class="info-row">
+                <span class="info-label">Total Bill Amount</span>
+                <span class="info-value">₹ 32,999.30</span>
               </div>
-              <div class="d-flex mb-3 gap-2">
-                <div style="font-size: 12px">Outlet</div>
-                <div class="fw-semibold" style="font-size: 13px">Le Cafe</div>
+              <div class="info-row">
+                <span class="info-label">Outlet</span>
+                <span class="info-value">Le Cafe</span>
               </div>
             </div>
           </div>
 
           <div class="mb-4 p-1 border-bottom">
-            <p class="fw-semibold mb-3" style="font-size: 13px">Signatures</p>
+            <p class="fw-semibold mb-3 section-title">Signatures</p>
             <div
               v-for="(item, index) in signatures"
               :key="index"
-              class="d-flex align-items-center mb-2 fw-medium p-1 gap-2"
+              class="info-row"
             >
-              <span class="fw-normal" style="font-size: 12px">{{
-                item.label
-              }}</span>
-              <span class="d-flex gap-2" style="color: #e23744">
+              <span class="info-label">{{ item.label }}</span>
+              <span class="d-flex gap-2 info-value" style="color: #e23744">
                 <img :src="thubmsdown" alt="" class="object-fit-contain" />
                 <span class="fw-bold" style="font-size: 13px">Not-Signed</span>
               </span>
@@ -68,35 +62,39 @@
           </div>
 
           <div class="mb-4">
-            <div
-              class="d-flex align-items-center mb-3 pb-3 gap-2 border-bottom"
-            >
-              <span class="fw-semibold" style="font-size: 13px"
+            <div class="info-row mb-3 pb-3 border-bottom">
+              <span class="info-label fw-semibold" style="font-size: 13px"
                 >Invoice Linked</span
               >
-              <button
-                class="bg-transparent rounded px-3 fw-medium"
-                style="
-                  color: #e23744;
-                  border: 1px solid #e23744;
-                  font-size: 11px;
-                "
-              >
-                link
-              </button>
+              <span class="info-value">
+                <button
+                  class="bg-transparent rounded px-3 fw-medium"
+                  style="
+                    color: #e23744;
+                    border: 1px solid #e23744;
+                    font-size: 11px;
+                  "
+                >
+                  link
+                </button>
+              </span>
             </div>
-            <div class="d-flex align-items-center gap-2 pb-3 border-bottom">
-              <span class="fw-semibold" style="font-size: 13px">E-Invoice</span>
-              <button
-                class="bg-transparent rounded px-2 fw-medium"
-                style="
-                  color: #e23744;
-                  border: 1px solid #e23744;
-                  font-size: 11px;
-                "
+            <div class="info-row pb-3 border-bottom">
+              <span class="info-label fw-semibold" style="font-size: 13px"
+                >E-Invoice</span
               >
-                Generate
-              </button>
+              <span class="info-value">
+                <button
+                  class="bg-transparent rounded px-2 fw-medium"
+                  style="
+                    color: #e23744;
+                    border: 1px solid #e23744;
+                    font-size: 11px;
+                  "
+                >
+                  Generate
+                </button>
+              </span>
             </div>
           </div>
 
@@ -122,67 +120,57 @@
             </button>
           </div>
 
-          <div class="mb-4 d-flex gap-3 border-bottom pb-3">
-            <h6 class="fw-semibold" style="font-size: 13px">Remarks</h6>
-            <p class="mb-0 fw-semibold">---</p>
-          </div>
-
-          <div class="mb-4 p-1 border-bottom">
-            <h6 class="fw-bold mb-3" style="font-size: 13px">Guest Details</h6>
-            <div class="p-1">
-              <div class="d-flex mb-2 gap-3 pb-1">
-                <div style="font-size: 12px">Guest Name</div>
-                <div class="fw-bold" style="font-size: 12px">---</div>
-              </div>
-              <div class="d-flex mb-2 gap-3 pb-1">
-                <div style="font-size: 12px">Guest Employee ID</div>
-                <div class="fw-bold" style="font-size: 12px">---</div>
-              </div>
-              <div class="d-flex mb-2 gap-3">
-                <div style="font-size: 12px">Room Number</div>
-                <div class="fw-bold" style="font-size: 12px">---</div>
-              </div>
+          <div class="mb-4 border-bottom pb-3">
+            <div class="info-row">
+              <span class="info-label fw-semibold" style="font-size: 13px"
+                >Remarks</span
+              >
+              <span class="info-value fw-semibold">---</span>
             </div>
           </div>
 
           <div class="mb-4 p-1 border-bottom">
-            <h6 class="fw-bold mb-3" style="font-size: 13px">Share Details</h6>
-            <div class="p-1">
-              <div class="d-flex mb-2 pb-1 gap-3">
-                <div class="text-muted" style="font-size: 12px">
-                  Mobile Number
-                </div>
-                <div class="fw-bold" style="font-size: 12px">92XXXXXXXX26</div>
-              </div>
-              <div class="d-flex mb-2 gap-3">
-                <div class="text-muted" style="font-size: 12px">Email ID</div>
-                <div class="fw-bold" style="font-size: 12px">---</div>
-              </div>
+            <p class="fw-bold mb-3 section-title">Guest Details</p>
+            <div class="info-row">
+              <span class="info-label">Guest Name</span>
+              <span class="info-value fw-bold">---</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Guest Employee ID</span>
+              <span class="info-value fw-bold">---</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Room Number</span>
+              <span class="info-value fw-bold">---</span>
+            </div>
+          </div>
+
+          <div class="mb-4 p-1 border-bottom">
+            <p class="fw-bold mb-3 section-title">Share Details</p>
+            <div class="info-row">
+              <span class="info-label text-muted">Mobile Number</span>
+              <span class="info-value fw-bold">92XXXXXXXX26</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label text-muted">Email ID</span>
+              <span class="info-value fw-bold">---</span>
             </div>
           </div>
 
           <div class="border-bottom mb-4 p-1">
-            <h6 class="fw-bold mb-3" style="font-size: 13px">
-              Payment Details
-            </h6>
-            <div class="p-1">
-              <div class="d-flex gap-2 mb-2">
-                <span style="font-size: 12px">Amex Card (36XXXXXX)</span>
-                <span class="fw-semibold" style="font-size: 13px"
-                  >₹ 25,299.20</span
-                >
-              </div>
-              <div class="d-flex gap-2">
-                <span style="font-size: 12px">UPI (36XXXXXX)</span>
-                <span class="fw-semibold" style="font-size: 13px"
-                  >₹ 2,000.00</span
-                >
-              </div>
+            <p class="fw-bold mb-3 section-title">Payment Details</p>
+            <div class="info-row">
+              <span class="info-label">Amex Card (36XXXXXX)</span>
+              <span class="info-value fw-semibold">₹ 25,299.20</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">UPI (36XXXXXX)</span>
+              <span class="info-value fw-semibold">₹ 2,000.00</span>
             </div>
           </div>
 
           <div class="mb-2 p-1">
-            <h6 class="fw-bold mb-3" style="font-size: 13px">Activity log</h6>
+            <p class="fw-bold mb-3 section-title">Activity log</p>
           </div>
         </div>
       </div>
@@ -202,7 +190,7 @@ const signatures = [
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 .bodyy {
   font-family: "Poppins", sans-serif;
@@ -220,5 +208,28 @@ const signatures = [
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.section-title {
+  font-size: 13px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.info-label {
+  width: 140px; 
+  min-width: 140px;
+  font-size: 12px;
+}
+
+.info-value {
+  flex: 1;
+  font-size: 12px;
+  font-weight: bold;
 }
 </style>
